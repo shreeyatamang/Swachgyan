@@ -30,16 +30,7 @@
     
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 .IntroPara {
     font-size: larger;
@@ -48,7 +39,6 @@
     background-repeat: repeat; /* Background repeat */
     padding: 1rem; /* Padding */
     border-radius: 10px; /* Border radius */
-    animation: fadeIn 14s ease forwards; /* Apply animation */
     margin-top: -300px; 
     align-items: center;
     justify-content: center;
