@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     height: 100px;
     width: 100vw;
     margin: 0 auto;
@@ -6,19 +6,22 @@
     align-items: center;
     justify-content: center;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 3;
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: green;
+    position: fixed;
+    top: 0;
 }
-.desktopMenuListItem{
+
+.desktopMenuListItem {
     margin: 1rem;
     cursor: pointer;
     font-family: 'Pacifico';
     font-size: 25px;
-
 }
-.desktopMenuListItem:hover{
+
+.desktopMenuListItem:hover {
     color: orange;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid orange;

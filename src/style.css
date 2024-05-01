@@ -1,2 +1,14 @@
 
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: orange;
+}
+body{
+    background-color: rgb(3, 243, 3);
+    overflow:hidden;
+    overflow-y: scroll;
+}

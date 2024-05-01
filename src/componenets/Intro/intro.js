@@ -7,8 +7,8 @@ const Intro = () => {
     
       <section id="intro">
         <div className='introcontent'>
-        <p className='IntroPara'>Welcome Waste Warriors!</p>
-        <p className='IntroSecond'>"Embark on an eco-friendly journey with fun <br/>games and quizzes!"</p>
+        <p className='IntroPara'></p>
+        <p className='IntroSecond'></p>
         
 
         </div>
