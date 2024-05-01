@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.use('/auth', userRoutes);
 
+
 app.listen(3000, () => {
     console.log("Node API is running on port 3000");
   });

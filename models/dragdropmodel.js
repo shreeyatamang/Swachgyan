@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
 
 const DragDropSchema = new mongoose.Schema({
-  name: {
+  playerName: {
     type: String,
     required: true,
   },
-  scores: [{
-    score: {
+  scores:{
       type: Number,
       required: true,
     },
@@ -14,7 +13,6 @@ const DragDropSchema = new mongoose.Schema({
       type: Date,
       default: Date.now,
     },
-  }],
 });
 
 const DragDropModel = mongoose.model("DragDrop", DragDropSchema);
