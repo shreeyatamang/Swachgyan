@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+    background-color: white;
+    margin: 0; /* Remove default body margin */
+}
+
+.container {
+    width: 100vw; /* Set container width to full viewport width */
+    max-width: 100%; /* Optional: set maximum width for larger screens */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(88, 179, 14, 0.8);
+    gap: 30px;
+    padding: 40px, 60px;
+}
+
+h2{
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+}
+
+
+
+.reset{
+    padding:15px 20px;
+    color:rgba(88, 179, 14, 0.8);
+    background-color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+
+
+}
+
+.reset:focus{
+    color: White;
+    background-color: rgba(88, 179, 14, 0.8);
+}
+
+.memoryGame{
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item{
+    position: relative;
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transition: 0.25s; 
+}
