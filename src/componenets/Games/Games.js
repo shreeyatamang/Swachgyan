@@ -3,57 +3,82 @@ import './Games.css';
 
 const Games = () => {
     const [emojis, setEmojis] = useState([
-        '🍌', '🍌','🥦', '🥦','🍃', '🍃', '🌱', '🌱', '🥫', '🥫', '📦', '📦', '🥤', '🥤', '📱', '📱', 
+        '🍕', '🍕','🥦', '🥦','🍏', '🍏', '🥕', '🥕', '🥫', '🥫', '📦', '📦', '🥤', '🥤', '🚗', '🚗', 
     ]);
+    const [shuffledPairs, setShuffledPairs] = useState([]);
+
+    useEffect(() => {
+        const shuffledEmojis = emojis.sort(() => Math.random() - 0.5);
+        const selectedEmojis = Array.from(new Set(shuffledEmojis.slice(0, 8)));
+        const pairs = [...selectedEmojis, ...selectedEmojis];
+        const shuffledPairs = pairs.sort(() => Math.random() - 0.5);
+        setShuffledPairs(shuffledPairs);
+
+    }, [emojis]);
+
+    const [flippedIndices, setFlippedIndices] = useState([]);
+    const [solvedIndices, setSolvedIndices] = useState([]);
 
     const handleClick = (index) => {
-        // Handle click event
-        console.log('Clicked index:', index);
-    };
-    
-    useEffect(() => {
-        // Shuffle the emojis array
-        const shuffledEmojis = emojis.sort(() => Math.random() - 0.5);
-    
-        // Select a certain number of emojis (e.g., 8) to form pairs
-        const selectedEmojis = shuffledEmojis.slice(0, 8);
-    
-        // Duplicate each selected emoji to create pairs
-        const pairs = [...selectedEmojis, ...selectedEmojis];
-    
-        // Shuffle the pairs array
-        const shuffledPairs = pairs.sort(() => Math.random() - 0.5);
-    
-        // Create div elements for each emoji pair and append to the memory game container
-        for (let i = 0; i < 16; i++) {
-            let box = document.createElement("div");
-            box.className = 'item';
-            box.innerHTML = shuffledPairs[i];
-            document.querySelector('.memoryGame').appendChild(box);
+        if (flippedIndices.length === 2) return;
+
+        setFlippedIndices([...flippedIndices, index]);
+
+        if (flippedIndices.length === 1) {
+            if (shuffledPairs[flippedIndices[0]] === shuffledPairs[index]) {
+                
+                setSolvedIndices([...solvedIndices, flippedIndices[0], index]);
+                setFlippedIndices([]);
+            } else {
+                
+                setTimeout(() => {
+                    setFlippedIndices([]);
+                }, 1000);
+            }
         }
-    }, []);
+    };
+
+    const renderBoxes = () => {
     
-    
-    
-    
-    
-    
+        
+        return shuffledPairs.map((emoji, index) => {
+            const isFlipped = flippedIndices.includes(index);
+            const isSolved = solvedIndices.includes(index);
+
+            return (
+                <div
+                    key={index}
+                    className={`item ${isFlipped || isSolved ? 'flip' : ''}`}
+                    onClick={() => handleClick(index)}
+                >
+                    {isFlipped || isSolved ? emoji : ''}
+                </div>
+            );
+        });
+    };
     
 
     const resetGame = () => {
-        window.location.reload();
+        setFlippedIndices([]);
+        setSolvedIndices([]);
+        setEmojis([
+            '🍕', '🍕','🥦', '🥦','🍃', '🍃', '🌱', '🌱', '🥫', '🥫', '📦', '📦', '🥤', '🥤', '📱', '📱', 
+        ]);
     };
 
     return (
         <div className="container">
             <h2>Games</h2>
-            <div className="memoryGame"></div>
+            <div className="memoryGame">{renderBoxes()}</div>
             <button className="reset" onClick={resetGame}>Reset Game</button>
         </div>
     );
+
 }
 
 export default Games;
+
+
 
 
 
