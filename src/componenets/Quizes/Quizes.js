@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './Quizes.css';
 
 const Quizes = () => {
-  const [questions, setQuestions] = useState([
+  const questionsData = [
     {
       id: 1,
       question: "1. What should you do with empty plastic bottles?",
@@ -14,16 +14,16 @@ const Quizes = () => {
       ]
     },
     {
-        id: 2,
-        question: "2. What should you do with old newspapers and magazines?",
-        answers: [
-          { text: "a. Burn them in the backyard", correct: false },
-          { text: "b. Recycle them", correct: true },
-          { text: "c. Bury them in the garden", correct: false },
-          { text: "d. Leave them on the street", correct: false }
-        ]
-      },
-      {
+      id: 2,
+      question: "2. What should you do with old newspapers and magazines?",
+      answers: [
+        { text: "a. Burn them in the backyard", correct: false },
+        { text: "b. Recycle them", correct: true },
+        { text: "c. Bury them in the garden", correct: false },
+        { text: "d. Leave them on the street", correct: false }
+      ]
+    },
+    {
         id: 3,
         question: "3. What should you do with old clothes that are no longer wearable?",
         answers: [
@@ -56,68 +56,56 @@ const Quizes = () => {
   
   
   
-    // Add other questions here
-  ]);
+  
+  ];
 
+  const [questions, setQuestions] = useState(questionsData);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
-
-  const answerButtonsRef = useRef(null);
 
   const handleAnswerClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
     }
     setShowNextButton(true);
-    disableAllButtons();
-  };
-
-  const disableAllButtons = () => {
-    const answerButtons = answerButtonsRef.current.querySelectorAll('.btn');
-    answerButtons.forEach(button => {
-      button.disabled = true;
-    });
   };
 
   const handleNextClick = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
-    setShowNextButton(false);
-    enableAllButtons();
-  };
-
-  const enableAllButtons = () => {
-    const answerButtons = answerButtonsRef.current.querySelectorAll('.btn');
-    answerButtons.forEach(button => {
-      button.disabled = false;
-    });
-  };
-
-  useEffect(() => {
-    if (currentQuestionIndex === questions.length) {
-      // Quiz completed
+    if (currentQuestionIndex + 1 < questions.length) {
+      setShowNextButton(false);
+      setCurrentQuestionIndex(prevIndex => prevIndex + 1); 
+    } else {
+      alert("Quiz completed! Your score is " + score + "/" + questions.length);
     }
-  }, [currentQuestionIndex, questions.length]);
+  };
+  
+  
 
   return (
     <div className="app">
       <h1>QUIZES</h1>
       <div className="quize">
         <h2>{questions[currentQuestionIndex].question}</h2>
-        <div id="answer-buttons" ref={answerButtonsRef}>
+        <div id="answer-buttons">
           {questions[currentQuestionIndex].answers.map((answer, index) => (
-            <button key={index} className="btn" onClick={() => handleAnswerClick(answer.correct)} data-correct={answer.correct}>
+            <button key={index} className="btn" onClick={() => handleAnswerClick(answer.correct)}>
               {answer.text}
             </button>
           ))}
         </div>
         {showNextButton && <button id="next-btn" onClick={handleNextClick}>Next</button>}
+        <div>
+          Score: {score}
+        </div>
       </div>
     </div>
   );
 }
 
 export default Quizes;
+
+
 
 
 
