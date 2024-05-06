@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-import games from '../../assests/Games.png';
 import { Link }from 'react-scroll';
 const Navbar = () => {
   return (
@@ -18,6 +17,9 @@ const Navbar = () => {
         </Link>
         <Link className='desktopMenuListItem'>
            Kids Club
+        </Link>
+        <Link className='desktopMenuListItem'>
+           Contact
         </Link>
       </div>
     </nav>

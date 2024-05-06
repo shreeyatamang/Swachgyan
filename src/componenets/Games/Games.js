@@ -11,7 +11,7 @@ const Games = () => {
     const [shuffledPairs, setShuffledPairs] = useState([]);
     const [flippedIndices, setFlippedIndices] = useState([]);
     const [solvedIndices, setSolvedIndices] = useState([]);
-    const [showCongratulations, setShowCongratulations] = useState(false); // New state variable
+    const [showCongratulations, setShowCongratulations] = useState(false); 
 
     useEffect(() => {
         const shuffledEmojis = emojis.sort(() => Math.random() - 0.5);
@@ -31,7 +31,7 @@ const Games = () => {
                 setSolvedIndices([...solvedIndices, flippedIndices[0], index]);
                 setFlippedIndices([]);
                 if (solvedIndices.length + 2 === shuffledPairs.length) {
-                    setShowCongratulations(true); // Show congratulatory message
+                    setShowCongratulations(true); //  congratulatory message
                 }
             } else {
                 setTimeout(() => {

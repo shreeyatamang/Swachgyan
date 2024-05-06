@@ -8,7 +8,7 @@ body{
 
 }
 .app{
-    background: white;
+    background:rgba(232, 28, 62, 0.686);
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -17,7 +17,7 @@ body{
 }
 .app h1{
     font-size: 25px;
-    color: rgb(1, 121, 9);
+    color: white;
     font-weight: 600;
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
@@ -28,7 +28,7 @@ body{
 }
 .quize h2{
     font-size: 18px;
-    color: rgba(88, 179, 14, 0.8);
+    color: white;
     font-weight: 600;
 }
 
@@ -69,13 +69,21 @@ body{
 .incorrect {
     background: #ff9393;
 }
-/* Quizes.css */
+
 .score {
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
   }
+
+  .quize {
+    background-color:rgba(232, 28, 62, 0.686); 
+    padding: 20px;
+    border-radius: 10px;
+  }
+ 
+  
   
   
 
