@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDom from 'react-dom/client';
-import App from './App';
+import ReactDOM from 'react-dom';
+import App from './App'; // Correct path to App.js
 
-const root =ReactDom.createRoot(document.getElementById('root'));
- root.render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>
- );
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
 

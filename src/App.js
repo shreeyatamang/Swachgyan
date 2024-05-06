@@ -1,12 +1,8 @@
 import Navbar from "./componenets/Navbar/Navbar";
 import Intro from  './componenets/Intro/intro'; 
 import Games from './componenets/Games/Games';
-import Quizes from './componenets/Quizes/Quizes';
-
-import React, { useState } from 'react';
-
-
-
+import Quizes from './componenets/Quizes/Quizes'; 
+import Aboutus from './componenets/Aboutus/Aboutus'; 
 
 function App (){
   return (
@@ -14,10 +10,10 @@ function App (){
       <Navbar/>
       <Intro/>
       <Games/>
-      <Quizes/>
-   
+      <Quizes/> 
+      <Aboutus/> 
     </div>
   );
 }
+export default App; 
 
-export default App;
