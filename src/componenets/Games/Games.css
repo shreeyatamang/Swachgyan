@@ -8,8 +8,8 @@
 
 
 .square-box {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
@@ -18,13 +18,18 @@
     background-size: cover;
     background-position: center;
 }
-
-
-
-
-
-
-
+.square-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .square-box h2 {
+    position: absolute;
+    top: 0;
+  }
+  
 * {
     margin: 0;
     padding: 0;
@@ -58,9 +63,10 @@ body {
 
 h2{
     font-size: 3em;
-    color: white;
+    color: rgba(232, 28, 62, 0.686);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    border: black;
 
 }
 
@@ -136,7 +142,7 @@ h2{
     color: white !important;
 }
 
-/* Add this CSS to your Games.css file or wherever you manage your CSS */
+
 .congratulations {
     position: fixed;
     top: 50%;

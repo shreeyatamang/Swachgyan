@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Games.css';
+import bgg from "../../assests/bgg.png";
+import memorygame from "../../assests/memorygame.png";
 
 const Games = () => {
     const [memoryGameVisible, setMemoryGameVisible] = useState(false);
@@ -69,11 +71,15 @@ const Games = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <h2>Games</h2>
             {!memoryGameVisible && (
-                <div className="square-box" onClick={toggleMemoryGame}>
-                    <span role="img" aria-label="video-game" style={{ fontSize: '5rem' }}>▶</span>
+                <div
+                    className="square-box"
+                    style={{ backgroundImage: `url(${memorygame})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                    onClick={toggleMemoryGame}
+                >
+                    
                 </div>
             )}
             {memoryGameVisible && (
@@ -82,7 +88,7 @@ const Games = () => {
                     <button className="reset" onClick={resetGame}>Reset Game</button>
                 </div>
             )}
-            {showCongratulations && ( // Render congratulatory message if showCongratulations is true
+            {showCongratulations && ( 
                 <div className="congratulations">
                     <p>Congratulations! You made it!</p>
                     <button onClick={() => setShowCongratulations(false)}>Close</button>
@@ -93,6 +99,9 @@ const Games = () => {
 }
 
 export default Games;
+
+
+
 
 
 
