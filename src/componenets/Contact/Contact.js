@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.css'; 
+import './Contact.css';
 
 const Contact = () => {
   return (
@@ -16,7 +16,7 @@ const Contact = () => {
                 <i className="bi bi-geo-alt"></i>
                 <div>
                   <h4>Location:</h4>
-                  <p>Nayabazar,Kathmandu</p>
+                  <p>Nayabazar, Kathmandu</p>
                 </div>
               </div>
               <div className="info-item">
@@ -51,19 +51,21 @@ const Contact = () => {
                 <div className="col-md-6 form-group">
                   <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
                 </div>
+                <div className="col-md-12 form-group">
+                  <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
+                </div>
+                <div className="col-md-12 form-group">
+                  <textarea className="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                </div>
+                <div className="col-md-12">
+                  <div className="my-3">
+                    <div className="loading">Loading</div>
+                    <div className="error-message"></div>
+                    <div className="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div className="text-center"><button type="submit">Send Message</button></div>
+                </div>
               </div>
-              <div className="form-group">
-                <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
-              </div>
-              <div className="form-group">
-                <textarea className="form-control" name="message" rows="7" placeholder="Message" required></textarea>
-              </div>
-              <div className="my-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div className="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
         </div>
@@ -73,6 +75,9 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
+
 
 
 
