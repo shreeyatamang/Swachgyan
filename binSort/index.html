@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recyclability Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap">
+
+</head>
+<body>
+    <div id="container">
+        <h1>Drag the Item to the Trash Bins!</h1>
+        <br>
+        <img class="hand" src="./img/hand.png" alt="hand">
+
+
+        <div class="itemContainer">
+        <img class="itemImage" src="./img/tomato.png" alt="Tomatoes" draggable="true">
+        <img class="itemImage" src="./img/bone.png" alt="Food Wastes" draggable="true">
+        <img class="itemImage" src="./img/hair.png" alt="Hairs" draggable="true">
+        <img class="itemImage" src="./img/apple.png" alt="Apples" draggable="true">
+        <img class="itemImage" src="./img/banana.png" alt="Bananas" draggable="true">
+        
+        <img class="itemImage" src="./img/cardboard.png" alt="Cardboard Boxes" draggable="true">
+        <img class="itemImage" src="./img/toiletpaper.png" alt="Toiletpapers" draggable="true">
+        <img class="itemImage" src="./img/bottle.png" alt="Water Bottles" draggable="true">
+        <img class="itemImage" src="./img/can.png" alt="Aluminium Cans" draggable="true">
+        <img class="itemImage" src="./img/milkbottle.png" alt="Milk Jugs" draggable="true">
+        
+        <img class="itemImage" src="./img/glass.png" alt="Broken Glass Pieces" draggable="true">
+        <img class="itemImage" src="./img/cups.png" alt="Used Paper Cups" draggable="true">
+        <img class="itemImage" src="./img/medicines.png" alt="Medicines" draggable="true">
+        <img class="itemImage" src="./img/sanitarypad.png" alt="Sanitary Pads" draggable="true">
+        <img class="itemImage" src="./img/waiwai.png" alt="Food Wrappers" draggable="true">
+        </div>
+
+        <div class="trashBinContainer">
+        <img class="trashBin" id="organicBin" src="./img/greenbin.png" alt="Organic Bin">
+        <img class="trashBin" id="recyclableBin" src="./img/blueBin.png" alt="Recyclable Bin">
+        <img class="trashBin" id="nonRecyclableBin" src="./img/redBin.png" alt="Non-Recyclable Bin">
+    </div>
+
+    <img class="grass" src="./img/grass.png" alt="grass">
+
+       
+       
+        <div id="result"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
