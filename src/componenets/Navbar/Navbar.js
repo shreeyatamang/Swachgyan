@@ -1,30 +1,34 @@
 import React from 'react';
 import './Navbar.css';
-import { Link }from 'react-scroll';
+import { Link } from 'react-scroll';
+
+import gameIcon from '../../assests/gameIcon.png';
+import quizzesIcon from '../../assests/quizIcon.png';
+import aboutUsIcon from '../../assests/aboutusIcon.png';
+import contactIcon from '../../assests/contactUSICon 1.png';
+
 const Navbar = () => {
   return (
-   <nav className='navbar'>
     <nav className='navbar'>
       <div className='desktopMenu'>
-        <Link className='desktopMenuListItem'>
-            Games
+        <Link to="/game-page" className='desktopMenuListItem'>
+          <img src={gameIcon} alt="Game" className="menu-icon" />
+          <span>Games</span>
         </Link>
-        <Link className='desktopMenuListItem'>
-           Quizes
+        <Link to="/quizzes-page" className='desktopMenuListItem'>
+          <img src={quizzesIcon} alt="Quizzes" className="menu-icon" />
+          <span>Quizzes</span>
         </Link>
-        <Link className='desktopMenuListItem'>
-          About Us
+        <Link to="/about-us" className='desktopMenuListItem'>
+          <img src={aboutUsIcon} alt="About Us" className="menu-icon" />
+          <span>About Us</span>
         </Link>
-        <Link className='desktopMenuListItem'>
-           Kids Club
-        </Link>
-        <Link className='desktopMenuListItem'>
-           Contact
+        <Link to="/contact" className='desktopMenuListItem'>
+          <img src={contactIcon} alt="Contact" className="menu-icon" />
+          <span>Contact</span>
         </Link>
       </div>
     </nav>
-    
-   </nav>
   )
 }
 
