@@ -1,41 +1,33 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from "./componenets/Navbar/Navbar";
-import Intro from  './componenets/Intro/intro'; 
-import Games from './componenets/Games/Games';
-import Quizzes from './componenets/Quizes/Quizes'; 
-import Aboutus from './componenets/Aboutus/Aboutus'; 
-import Contact from './componenets/Contact/Contact'; 
+import Navbar from './components/Navbar/Navbar';
 
-function App (){
+import Navbar from "./components/Navbar/Navbar";
+import Intro from './components/Intro/Intro'; 
+import Games from './components/Games/Games';
+import Quizzes from './components/Quizzes/Quizzes'; 
+import AboutUs from './components/AboutUs/AboutUs'; 
+import Contact from './components/Contact/Contact'; 
+
+
+function App() {
   return (
-<<<<<<< HEAD
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/games" element={<Games />} />
           <Route path="/quizzes" element={<Quizzes />} />
-          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>
-=======
-    <div className="App">
-      <Navbar/>
-      <Intro/>
-      <Aboutus/> 
-      <Games/>
-      <Quizes/> 
-      
-      <Contact/>
-    
-      
-    </div>
->>>>>>> 54573fe588ce915e69ce9bdc6066911db7168643
   );
 }
+
 export default App;
+
+
 
 
