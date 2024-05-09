@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
 .navbar {
     height: 100px;
     width: 100vw;
@@ -6,23 +9,40 @@
     align-items: center;
     justify-content: center;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 3;
     background-color: white;
-    color: rgb(3, 180, 3);
+    color: RGB(214, 72, 31);
     position: fixed;
-    top: 0;
+    font-family: 'Fredoka One', sans-serif;
+    
 }
 
 .desktopMenuListItem {
     margin: 1rem;
     cursor: pointer;
-    font-family: 'Pacifico';
-    font-size: 25px;
+    font-family: 'Fredoka One', ;
+    font-size: 20px;
+    top: 20px;
+
+}
+.desktopMenuListItem span {
+    font-family: 'Fredoka One', sans-serif; /* Add Fredoka One font */
 }
 
 .desktopMenuListItem:hover {
     color: orange;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid orange;
+}
+
+.desktopMenuListItem {
+    position: relative;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    top: -50px; /* Adjust this value according to your preference */
+    left: 50%;
+    transform: translateX(-50%);
 }
