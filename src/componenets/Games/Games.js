@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Games.css';
-import bgg from "../../assests/bgg.png";
+import bk from "../../assests/bk.png";
 import memorygame from "../../assests/memorygame.png";
+import playGame from "../../assests/PlayGame.png"; // Import the PlayGame image
 
 const Games = () => {
-    const [memoryGameVisible, setMemoryGameVisible] = useState(false);
+    const [gameStep, setGameStep] = useState('playGame'); // Track the current step of the game
     const [emojis, setEmojis] = useState([
         '🍕', '🍕','🥦', '🥦','🍏', '🍏', '🥕', '🥕', '🥫', '🥫', '📦', '📦', '🥤', '🥤', '🚗', '🚗', 
     ]);
@@ -22,21 +23,30 @@ const Games = () => {
     }, [emojis]);
 
     const handleClick = (index) => {
-        if (flippedIndices.length === 2 || solvedIndices.includes(index)) return;
-
-        setFlippedIndices([...flippedIndices, index]);
-
-        if (flippedIndices.length === 1) {
-            if (shuffledPairs[flippedIndices[0]] === shuffledPairs[index]) {
-                setSolvedIndices([...solvedIndices, flippedIndices[0], index]);
-                setFlippedIndices([]);
-                if (solvedIndices.length + 2 === shuffledPairs.length) {
-                    setShowCongratulations(true); //  congratulatory message
+        if (gameStep === 'playGame') {
+            setGameStep('squareBox'); 
+        } else if (gameStep === 'squareBox') {
+            setGameStep('memoryGame'); 
+        } else {
+            if (!solvedIndices.includes(index)) {
+                if (flippedIndices.includes(index)) {
+                    setFlippedIndices(flippedIndices.filter((idx) => idx !== index));
+                } else {
+                    setFlippedIndices([...flippedIndices, index]);
+                    if (flippedIndices.length === 1) {
+                        if (shuffledPairs[flippedIndices[0]] === shuffledPairs[index]) {
+                            setSolvedIndices([...solvedIndices, flippedIndices[0], index]);
+                            setFlippedIndices([]);
+                            if (solvedIndices.length + 2 === shuffledPairs.length) {
+                                setShowCongratulations(true); 
+                            }
+                        } else {
+                            setTimeout(() => {
+                                setFlippedIndices([]);
+                            }, 1000);
+                        }
+                    }
                 }
-            } else {
-                setTimeout(() => {
-                    setFlippedIndices([]);
-                }, 1000);
             }
         }
     };
@@ -66,23 +76,23 @@ const Games = () => {
         ]);
     };
 
-    const toggleMemoryGame = () => {
-        setMemoryGameVisible(!memoryGameVisible);
-    };
-
     return (
-        <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="container" style={{ backgroundImage: `url(${bk})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <h2>Games</h2>
-            {!memoryGameVisible && (
+            {gameStep === 'playGame' && (
                 <div
-                    className="square-box"
-                    style={{ backgroundImage: `url(${memorygame})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                    onClick={toggleMemoryGame}
+                    className="play-game"
+                    onClick={() => setGameStep('squareBox')}
                 >
-                    
+                    <img src={playGame} alt="Play Game" />
                 </div>
             )}
-            {memoryGameVisible && (
+            {gameStep === 'squareBox' && (
+                <div className="square-box" onClick={() => setGameStep('memoryGame')}>
+ 
+                </div>
+            )}
+            {gameStep === 'memoryGame' && (
                 <div className="container">
                     <div className="memoryGame">{renderBoxes()}</div>
                     <button className="reset" onClick={resetGame}>Reset Game</button>
@@ -99,6 +109,17 @@ const Games = () => {
 }
 
 export default Games;
+
+
+
+
+
+
+
+
+
+
+
 
 
 

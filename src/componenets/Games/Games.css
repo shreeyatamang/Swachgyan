@@ -8,8 +8,8 @@
 
 
 .square-box {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 260px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@ h2{
 }
 
 .item.flip {
-    transform: rotateY(180deg); /* rotation effect when flipped */
+    transform: rotateY(180deg); 
 }
 
 .hidden {
@@ -170,6 +170,10 @@ h2{
 
 .congratulations button:hover {
     background-color: #45a049;
+}
+.square-box {
+    background-image: url('../../assests/memorygame.png');
+
 }
 
 
