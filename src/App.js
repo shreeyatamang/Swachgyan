@@ -8,6 +8,7 @@ import Contact from './componenets/Contact/Contact';
 
 function App (){
   return (
+<<<<<<< HEAD
     <Router>
       <div className="App">
         <Navbar/>
@@ -20,6 +21,19 @@ function App (){
         </Routes>
       </div>
     </Router>
+=======
+    <div className="App">
+      <Navbar/>
+      <Intro/>
+      <Aboutus/> 
+      <Games/>
+      <Quizes/> 
+      
+      <Contact/>
+    
+      
+    </div>
+>>>>>>> 54573fe588ce915e69ce9bdc6066911db7168643
   );
 }
 export default App;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
@@ -7,6 +8,9 @@
     }
   }
   
+=======
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+>>>>>>> 54573fe588ce915e69ce9bdc6066911db7168643
 
 
 .navbar {
@@ -50,6 +54,17 @@
   .menu-icon {
     position: absolute;
     top: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desktopMenuListItem {
+    position: relative;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    top: -50px; /* Adjust this value according to your preference */
     left: 50%;
     transform: translateX(-50%);
 }

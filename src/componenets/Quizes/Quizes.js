@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Quizes.css';
-import bk from "../../assests/bk.png";
+import bgg from "../../assests/bgg.png";
 
 const Quizes = () => {
   const questionsData = [
@@ -73,7 +73,7 @@ const Quizes = () => {
   };
 
   return (
-    <div className="container" style={{ backgroundImage: `url(${bk})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <h1 style={{ color: 'white' }}><b>QUIZES💡</b></h1>
 
       <div className="quize">

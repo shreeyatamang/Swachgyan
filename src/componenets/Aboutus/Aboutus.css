@@ -1,7 +1,10 @@
 /* Aboutus.css */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 #about {
     padding: 60px 0;
+    background: rgb(250, 239, 214);
+    font-family: 'Fredoka One', sans-serif;
 }
 
 #about .section-header {
@@ -15,20 +18,25 @@
     margin-bottom: 20px;
     padding-bottom: 10px;
     position: relative;
+    
+    
 }
 
 #about .section-header h2::after {
     content: '';
-    background: green;
+    background: rgb(43, 59, 9);
     width: 80px;
     height: 3px;
     position: absolute;
     left: calc(50% - 40px);
     bottom: 0;
+
 }
 
 #about .section-header p {
     margin-bottom: 0;
+    
+;
 }
 
 #about .row {
@@ -36,9 +44,21 @@
     justify-content: center;
 }
 
-#about .col-lg-6 {
-    margin-bottom: 30px;
+.col-lg-6 {
+    float: left; 
+    width: 50%;
+    box-sizing: border-box; 
+    font-family: 'Fredoka One', sans-serif;
 }
+
+@media (max-width: 992px) {
+    .col-lg-6 {
+        float: none; 
+        width: 100%; 
+    }
+}
+
+  
 
 #about img {
     max-width: 100%;
@@ -60,7 +80,7 @@
     left: 0;
     top: 5px;
     font-size: 24px;
-    color: white;
+    color: rgb(43, 59, 9);
 
 }
 
@@ -78,7 +98,7 @@
 }
 #about,
 #about * {
-    color: white; 
+    color: rgb(43, 59, 9); 
     font-size: 20px; 
 }
 
@@ -87,6 +107,7 @@
     animation: moveText 3s linear infinite; 
     color: rgb(0, 96, 0);
     font-size: x-large;
+    
 }
 
 
@@ -95,11 +116,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    
 }
 
 .kids2 {
     max-width: 100%;
     height: auto;
+    flex: 1;
+    margin-left: 80px;
 }
 
 .read-more-button {
