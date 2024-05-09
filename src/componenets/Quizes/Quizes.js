@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Quizes.css';
 import bgg from "../../assests/bgg.png";
+import QzCover from "../../assests/Qz.png";
 
 const Quizes = () => {
   const questionsData = [
@@ -60,6 +62,11 @@ const Quizes = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+  const [showQuiz, setShowQuiz] = useState(false); // State to control showing quiz
+
+  const handleCoverClick = () => {
+    setShowQuiz(true); // Show the quiz when cover is clicked
+  };
 
   const handleAnswerClick = (index) => {
     setSelectedAnswerIndex(index);
@@ -74,29 +81,40 @@ const Quizes = () => {
 
   return (
     <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <h1 style={{ color: 'white' }}><b>QUIZES💡</b></h1>
-
-      <div className="quize">
-        <h2>{questions[currentQuestionIndex].question}</h2>
-        <div id="answer-buttons">
-          {questions[currentQuestionIndex].answers.map((answer, index) => (
-            <button 
-              key={index} 
-              className={`btn ${selectedAnswerIndex === index ? 'selected' : ''}`} 
-              onClick={() => handleAnswerClick(index)} 
-              disabled={showNextButton}
-            >
-              {answer.text}
-            </button>
-          ))}
+      {!showQuiz && ( // Render cover image if showQuiz is false
+        <div onClick={handleCoverClick}>
+          <img src={QzCover} alt="Quiz Cover" className="quiz-cover" />
         </div>
-        {showNextButton && <button id="next-btn" onClick={handleNextClick}>Next</button>}
-      </div>
+      )}
+
+      {showQuiz && ( // Render quiz if showQuiz is true
+        <div>
+          <h1 style={{ color: 'white' }}><b>QUIZES💡</b></h1>
+          <div className="quize">
+            <h2>{questions[currentQuestionIndex].question}</h2>
+            <div id="answer-buttons">
+              {questions[currentQuestionIndex].answers.map((answer, index) => (
+                <button
+                  key={index}
+                  className={`btn ${selectedAnswerIndex === index ? 'selected' : ''}`}
+                  onClick={() => handleAnswerClick(index)}
+                  disabled={showNextButton}
+                >
+                  {answer.text}
+                </button>
+              ))}
+            </div>
+            {showNextButton && <button id="next-btn" onClick={handleNextClick}>Next</button>}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Quizes;
+
+
 
 
 

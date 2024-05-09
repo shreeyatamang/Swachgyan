@@ -4,7 +4,7 @@ import kids2 from "../../assests/kids2.png";
 
 const Aboutus = () => {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" style={{ backgroundColor: 'rgba(88, 179, 14, 0.8)' }}> 
       <div className="container" data-aos="fade-up">
         <div className="section-header">
           <h2>About Us</h2>
