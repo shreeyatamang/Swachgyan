@@ -8,4 +8,7 @@ router.get('/quizquestion', quizControllers.getQuizQuestions);
 // Route to calculate score
 router.post('/submit', quizControllers.calculateScore);
 
+// Route to retrieve quiz score for a specific user
+router.get('/score/:username', quizControllers.getQuizScore);
+
 module.exports = router;

@@ -15,3 +15,23 @@ exports.dragdropGame = (req, res) => {
             res.status(500).json({ message: 'Internal server error' });
         });
 };
+
+// Controller to retrieve the score for a specific player
+exports.getScore = async (req, res) => {
+    try {
+      const playerName = req.params.playerName;
+  
+      // Find the score for the given player name
+      const score = await DragDropModel.findOne({ playerName });
+  
+      if (!score) {
+        return res.status(404).json({ message: 'Score not found' });
+      }
+  
+      res.json({ playerName: score.playerName, score: score.scores });
+    } catch (err) {
+      console.error('Error retrieving score:', err);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  };
+  

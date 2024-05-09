@@ -8,5 +8,7 @@ router.post("/signup", userControllers.signup);
 router.post("/login", userControllers.login);
 
 router.post('/dragdrop', dragdropControllers.dragdropGame);
+router.get('/dragdrop/score/:playerName', dragdropControllers.getScore);
+
 
 module.exports = router;

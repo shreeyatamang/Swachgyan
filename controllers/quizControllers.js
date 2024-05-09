@@ -28,3 +28,24 @@ exports.calculateScore = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+// Controller to retrieve the quiz score for a specific user
+exports.getQuizScore = async (req, res) => {
+  try {
+    const username = req.params.username;
+
+    // Find the user by username and get their quiz score
+    const user = await LoginModel.findOne({ username });
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Assuming you have a field in the user document to store quiz score
+    const quizScore = user.quizScore || 0;
+
+    res.json({ username, quizScore });
+  } catch (err) {
+    console.error('Error retrieving quiz score:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
