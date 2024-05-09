@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            text-align: center;
+        }
+        #playNowButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #playNowButton:hover {
+            background-color: #45a049;
+        }
+
+        #quitButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #f43b3b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        #quitButton:hover {
+            background-color: #f43b3b;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to the Recycling Game</h1>
+        <button id="playNowButton" onclick="playNow()">Play Now</button><br>
+        <button id="quitButton" onclick="quitButton()">Quit</button>
+    </div>
+
+    <script>
+        function playNow() {
+            window.location.href = "index.html";
+        }
+
+        // function quitBotton() {
+        //     window.location.href = "index.html";
+        // }
+
+
+        
+    </script>
+</body>
+</html>

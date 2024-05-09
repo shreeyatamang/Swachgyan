@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite; 
+    background-size: cover;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .image-container img {
+    width: 350px;
+    height: auto;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+  
+  .title {
+    text-align: center;
+    margin-top: 80px; /* Adjust as needed */
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 50px;
+  }
+  

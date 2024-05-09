@@ -1,0 +1,155 @@
+/* Aboutus.css */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+#about {
+    padding: 60px 0;
+    background: rgb(250, 239, 214);
+    font-family: 'Fredoka One', sans-serif;
+}
+
+#about .section-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#about .section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    
+    
+}
+
+#about .section-header h2::after {
+    content: '';
+    background: rgb(43, 59, 9);
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: calc(50% - 40px);
+    bottom: 0;
+
+}
+
+#about .section-header p {
+    margin-bottom: 0;
+    
+;
+}
+
+#about .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.col-lg-6 {
+    float: left; 
+    width: 50%;
+    box-sizing: border-box; 
+    font-family: 'Fredoka One', sans-serif;
+}
+
+@media (max-width: 992px) {
+    .col-lg-6 {
+        float: none; 
+        width: 100%; 
+    }
+}
+
+  
+
+#about img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#about .content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about .content ul li {
+    position: relative;
+    padding-left: 30px;
+}
+
+#about .content ul li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 24px;
+    color: rgb(43, 59, 9);
+
+}
+
+/* Continuous moving animation for h3 text */
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#about,
+#about * {
+    color: rgb(43, 59, 9); 
+    font-size: 20px; 
+}
+
+#about .col-lg-6 h2 {
+    text-align: center;
+    animation: moveText 3s linear infinite; 
+    color: rgb(0, 96, 0);
+    font-size: x-large;
+    
+}
+
+
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.kids2 {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+    margin-left: 80px;
+}
+
+.read-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(2, 201, 2); 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-button:hover {
+    background-color: green; 
+  }
+  
+
+
+
+
+
+  
+
+
+  

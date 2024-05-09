@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.square-box {
+    width: 350px;
+    height: 350px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+.square-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .square-box h2 {
+    position: absolute;
+    top: 0;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    background-color: white;
+    margin: 0; 
+}
+
+.container {
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        background-size: cover;
+    background-position: center;
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+
+h2{
+    font-size: 3em;
+    color: rgba(232, 28, 62, 0.686);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border: black;
+
+}
+
+
+
+.reset{
+    padding:15px 20px;
+    color:rgba(88, 179, 14, 0.8);
+    background-color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+
+
+}
+
+.reset:focus{
+    color: White;
+    background-color: rgba(88, 179, 14, 0.8);
+}
+
+.memoryGame{
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item{
+    position: relative;
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transition: 0.25s; 
+}
+
+
+.item {
+    width: 100px;
+    height: 100px; 
+    border: 1px solid black;
+    background: white;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* transition for smooth animation */
+}
+
+.item.flip {
+    transform: rotateY(180deg); /* rotation effect when flipped */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.container h2 {
+    font-size: 5rem;
+}
+
+.container h2 .game-emoji {
+    color: white !important;
+}
+
+
+.congratulations {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.congratulations button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.congratulations button:hover {
+    background-color: #45a049;
+}
+
+
