@@ -3,6 +3,6 @@ document.getElementById("binSort").addEventListener("click", function() {
   });
   
   document.getElementById("Games").addEventListener("click", function() {
-    window.location.href = "../../../src/componenets/Games"; // Adjust the path accordingly
+    window.location.href = "../Games/Games.js"; // Adjust the path accordingly
   });
   
