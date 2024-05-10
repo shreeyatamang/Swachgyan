@@ -4,6 +4,7 @@ import Games from './componenets/Games/Games';
 import Quizes from './componenets/Quizes/Quizes'; 
 import Aboutus from './componenets/Aboutus/Aboutus'; 
 import Contact from './componenets/Contact/Contact'; 
+// import SelectChoice from './componenets/SelectChoice/select'; 
 
 function App (){
   return (
@@ -13,12 +14,9 @@ function App (){
       <Aboutus/> 
       <Games/>
       <Quizes/> 
-      
+      {/* <SelectChoice/> */}
       <Contact/>
-    
-      
     </div>
   );
 }
-export default App; 
-
+export default App;

@@ -15,7 +15,7 @@ const Aboutus = () => {
           <div className="col-lg-6">
             <div className="content ps-0 ps-lg-5">
               <h2 style={{ marginBottom: '20px' }}>At Swachyagyan, we believe that education is the key to fostering positive change.</h2>
-              <p className="fst-italic" ><b>Our Objectives:</b></p>
+              <p className="fst-italic" ><b>Our Objectives and motive:</b></p>
               <ul>
                 <li><i className="bi bi-check-circle-fill"></i>🌍.Educate children about the importance of waste management and segregation.</li>
                 <li><i className="bi bi-check-circle-fill"></i>🌍.Foster a sense of environmental responsibility to young learners.</li>
