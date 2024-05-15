@@ -22,10 +22,7 @@ body{
     border-bottom: 1px solid #333;
     padding-bottom: 30px;
 }
-.quiz{
-    padding: 20 px 0;
 
-}
 .quize h2{
     font-size: 18px;
     color: white;
@@ -50,18 +47,19 @@ body{
     color: #fff;
 }
 
-#next-btn{
+.btn-next {
     background: rgba(88, 179, 14, 0.8);
     color: #fff;
     font-weight: 500;
     width: 150px;
-    border:0;
-    padding:10px;
-    margin:20px auto 0;
-    border-radius: 4 px;
+    border: 0;
+    padding: 10px ;
+    margin: 20px auto 0;
+    border-radius: 4px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
+
 .correct {
     background: #9aeabc;
 }
@@ -78,10 +76,48 @@ body{
   }
 
   .quize {
-    background-color:rgba(232, 28, 62, 0.686); 
+   
     padding: 20px;
     border-radius: 10px;
+        width: 500px; /* Fixed width */
+        height: 380px; /* Fixed height */
+        overflow: auto; /* Add scroll if content overflows */
+        margin: 0 auto; /* Center the quiz container */
+        background-color: rgba(232, 28, 62, 0.686);
+        border-radius: 10px;
+        padding: 20px;
+   
   }
+
+ 
+
+.container {
+    position: relative;
+  }
+  
+  .congratulations {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .congratulations h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .congratulations p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+
+
+
+
+
  
   
   

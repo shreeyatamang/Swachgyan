@@ -15,34 +15,34 @@ const Contact = () => {
               <div className="info-item">
                 <i className="bi bi-geo-alt"></i>
                 <div>
-                  <h4>Location:</h4>
+                  <h4>Location 📍:</h4>
                   <p>Nayabazar, Kathmandu</p>
                 </div>
               </div>
               <div className="info-item">
                 <i className="bi bi-envelope"></i>
                 <div>
-                  <h4>Email:</h4>
+                  <h4>Email✉️:</h4>
                   <p>Swachyagyan@example.com</p>
                 </div>
               </div>
               <div className="info-item">
                 <i className="bi bi-phone"></i>
                 <div>
-                  <h4>Call:</h4>
+                  <h4>Call📞:</h4>
                   <p>+977 987654321</p>
                 </div>
               </div>
               <div className="info-item">
                 <i className="bi bi-clock"></i>
                 <div>
-                  <h4>Open Hours:</h4>
+                  <h4>Open Hours🕒:</h4>
                   <p>Mon-Sat: 11AM - 23PM</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 form-container"> {/* Added class form-container */}
             <form action="forms/contact.php" method="post" role="form" className="php-email-form">
               <div className="row">
                 <div className="col-md-6 form-group">
@@ -75,6 +75,8 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
 
 
 

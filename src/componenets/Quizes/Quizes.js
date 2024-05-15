@@ -62,32 +62,73 @@ const Quizes = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [showQuiz, setShowQuiz] = useState(false); // State to control showing quiz
+  const [showQuiz, setShowQuiz] = useState(false); 
+  const [quizCompleted, setQuizCompleted] = useState(false); 
 
   const handleCoverClick = () => {
-    setShowQuiz(true); // Show the quiz when cover is clicked
+    setShowQuiz(true); 
   };
 
   const handleAnswerClick = (index) => {
+    const isCorrect = questions[currentQuestionIndex].answers[index].correct;
     setSelectedAnswerIndex(index);
     setShowNextButton(true);
+    const updatedQuestions = [...questions];
+    updatedQuestions[currentQuestionIndex].answers[index].selected = true;
+    updatedQuestions[currentQuestionIndex].answers[index].isCorrect = isCorrect;
+    // Marking the correct answer
+    updatedQuestions[currentQuestionIndex].answers.forEach((answer, i) => {
+      if (answer.correct) {
+        updatedQuestions[currentQuestionIndex].answers[i].selected = true;
+        updatedQuestions[currentQuestionIndex].answers[i].isCorrect = true;
+      }
+    });
+    setQuestions(updatedQuestions);
+  };
+  
+  const handleNextClick = () => {
+    if (currentQuestionIndex === questions.length - 1) {
+      setQuizCompleted(true); 
+    } else {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setShowNextButton(false);
+      setSelectedAnswerIndex(null);
+    }
   };
 
-  const handleNextClick = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
-    setShowNextButton(false);
-    setSelectedAnswerIndex(null);
+  const calculateScore = () => {
+    let correctAnswers = 0;
+    questions.forEach(question => {
+      const answeredCorrectly = question.answers.find(answer => answer.selected && answer.correct);
+      if (answeredCorrectly && !question.answers.some(answer => answer.selected && !answer.correct)) {
+        correctAnswers++;
+      }
+    });
+    return correctAnswers;
   };
+  
+  
+
+  const renderCongratulations = () => {
+    const score = calculateScore();
+    return (
+      <div className="congratulations">
+        <h1>Congratulations!</h1>
+        <p>You scored {score} out of {questions.length}.</p>
+      </div>
+    );
+  };
+  
 
   return (
     <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {!showQuiz && ( // Render cover image if showQuiz is false
+      {!showQuiz && ( 
         <div onClick={handleCoverClick}>
           <img src={QzCover} alt="Quiz Cover" className="quiz-cover" />
         </div>
       )}
 
-      {showQuiz && ( // Render quiz if showQuiz is true
+      {showQuiz && !quizCompleted && ( 
         <div>
           <h1 style={{ color: 'white' }}><b>QUIZES💡</b></h1>
           <div className="quize">
@@ -96,7 +137,7 @@ const Quizes = () => {
               {questions[currentQuestionIndex].answers.map((answer, index) => (
                 <button
                   key={index}
-                  className={`btn ${selectedAnswerIndex === index ? 'selected' : ''}`}
+                  className={`btn ${selectedAnswerIndex === index ? 'selected' : ''} ${answer.selected && (answer.isCorrect ? 'correct' : 'incorrect')}`}
                   onClick={() => handleAnswerClick(index)}
                   disabled={showNextButton}
                 >
@@ -104,32 +145,14 @@ const Quizes = () => {
                 </button>
               ))}
             </div>
-            {showNextButton && <button id="next-btn" onClick={handleNextClick}>Next</button>}
+            {showNextButton && <button id="next-btn" className="btn-next" onClick={handleNextClick}>Next</button>}
           </div>
         </div>
       )}
+
+      {quizCompleted && renderCongratulations()} 
     </div>
   );
 }
 
 export default Quizes;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

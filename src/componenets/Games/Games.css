@@ -72,32 +72,33 @@ h2{
 
 
 
-.reset{
-    padding:15px 20px;
-    color:rgba(88, 179, 14, 0.8);
-    background-color: white;
-    font-size: 1.5em;
+.reset {
+    padding: 8px 15px; 
+    font-size: 1em; 
     letter-spacing: 0.1em;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 600;
-
-
+    width: auto; 
 }
+
+
 
 .reset:focus{
     color: White;
     background-color: rgba(88, 179, 14, 0.8);
 }
 
-.memoryGame{
-    width: 440px;
-    height: 440px;
+.memoryGame {
+    width: 440px; /* Adjust as needed */
+    height: 440px; /* Adjust as needed */
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
 }
 
 .item{
@@ -175,5 +176,8 @@ h2{
     background-image: url('../../assests/memorygame.png');
 
 }
+
+
+
 
 

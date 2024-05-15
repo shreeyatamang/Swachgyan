@@ -1,0 +1,193 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.hero-section {
+    height: 1px; 
+    background-color: #457C40;
+    
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bobby Jones Soft', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    
+}
+.hero-section h1 {
+    color: white;
+}
+
+/*know your trash section */
+
+.know {
+   background-color: #457C40;
+   height: 00%;
+}
+
+.image-slider-container {
+    max-width: 1000px;
+    margin: 20px auto; 
+    border-radius: 100px; 
+    overflow: hidden; 
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.image-slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider img {
+    width: 100%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1;
+}
+button:hover {
+   
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.prev {
+    left: 0;
+
+}
+
+.next {
+    right: 0;
+}
+
+/* info */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.text {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 75%;
+    height: auto;
+    flex: 1;
+    margin-left: 80px;
+}
+
+.text h1 {
+    color: #457C40;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Comic Sans MS", cursive;
+
+}
+
+.text h2 {
+    color: #457C40;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Comic Sans MS", cursive;
+
+}
+
+.text p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS", cursive;
+    color: #544541;
+    font-size: 18px;
+
+}
+ 
+
+/*fact */
+.centered-container {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Comic Sans MS", cursive;
+    color: #2C4F40;
+    font-size: x-large;
+    text-shadow: wheat; 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.fact-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.fact-box {
+   
+    margin: 10px;
+    padding: 20px;
+    background-color: #457C40;
+    border-radius: 20px;
+    height: 115px;
+    font-family: "Comic Sans MS", cursive;
+    width: 290px;
+    color: #F9F8CE;
+    text-align: center;
+     
+}
+
+.fact-box:hover {
+    background-color: #044B25;
+}
+
+.fact-box h3 {
+    margin-bottom: 10px;
+    font-family: "Comic Sans MS", cursive;
+
+
+}
+
+.fact-content {
+    display: none;
+}
+
+.fact-box:hover .fact-content {
+    display: block;
+}
+
+.fact-box:hover {
+    transform: scale(1);
+}

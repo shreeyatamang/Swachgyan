@@ -58,6 +58,7 @@
 
 .desktopMenuListItem {
     position: relative;
+    text-decoration: none;
   }
   
   .menu-icon {

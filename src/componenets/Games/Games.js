@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Games.css';
 import bk from "../../assests/bk.png";
 import memorygame from "../../assests/memorygame.png";
-import playGame from "../../assests/PlayGame.png"; // Import the PlayGame image
+import playGame from "../../assests/PlayGame.png"; 
 
 const Games = () => {
     const [gameStep, setGameStep] = useState('playGame'); // Track the current step of the game
@@ -52,10 +52,10 @@ const Games = () => {
     };
 
     const renderBoxes = () => {
-        return shuffledPairs.map((emoji, index) => {
+        return shuffledPairs.slice(0, 12).map((emoji, index) => {
             const isFlipped = flippedIndices.includes(index);
             const isSolved = solvedIndices.includes(index);
-
+    
             return (
                 <div
                     key={index}
@@ -67,6 +67,7 @@ const Games = () => {
             );
         });
     };
+    
 
     const resetGame = () => {
         setFlippedIndices([]);

@@ -1,11 +1,21 @@
 /* Aboutus.css */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+
+/* Aboutus.css */
 #about {
-    padding: 60px 0;
-    background: rgb(250, 239, 214);
+    padding-top: 80px; /* Adjust the value as needed to create the desired gap */
+    padding-bottom: 60px;
+    background: rgb(144, 238, 144);
     font-family: 'Fredoka One', sans-serif;
 }
+
+/* Rest of your CSS styles */
+
+
+
+
+
 
 #about .section-header {
     margin-bottom: 30px;
@@ -127,9 +137,10 @@
     margin-left: 80px;
 }
 
-.read-more-button {
+.lead-more-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 12px; /* Adjusted padding */
+    width: 150px; /* Adjusted width */
     background-color: rgb(2, 201, 2); 
     color: #ffffff; 
     border: none;
@@ -138,11 +149,13 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .read-more-button:hover {
+}
+
+
+.learn-more-button:hover {
     background-color: green; 
-  }
+}
+
   
 
 
