@@ -28,7 +28,7 @@ exports.getScore = async (req, res) => {
         return res.status(404).json({ message: 'Score not found' });
       }
   
-      res.json({ playerName: score.playerName, score: score.scores });
+      res.json({score: score.scores });
     } catch (err) {
       console.error('Error retrieving score:', err);
       res.status(500).json({ message: 'Internal server error' });
