@@ -1,21 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./componenets/Navbar/Navbar";
-import Intro from  './componenets/Intro/intro';
-import Games from './componenets/Games/Games';
-import Quizzes from './componenets/Quizes/Quizes';
-import Aboutus from './componenets/Aboutus/Aboutus';
-import Contact from './componenets/Contact/Contact';
-import SelectChoice from './componenets/SelectChoice/SelectChoice';
-import KidsClub from './componenets/KidsClub/KidsClub';
-import SignUp from './componenets/SignUp/SignUp'; 
-import Login from './componenets/LogIn/LogIn';
+import Intro from "./componenets/Intro/intro";
+import Games from "./componenets/Games/Games";
+import Quizzes from "./componenets/Quizes/Quizes";
+import Aboutus from "./componenets/Aboutus/Aboutus";
+import Contact from "./componenets/Contact/Contact";
+import SelectChoice from "./componenets/SelectChoice/SelectChoice";
+import KidsClub from "./componenets/KidsClub/KidsClub";
+import SignUp from "./componenets/SignUp/SignUp";
+import Login from "./componenets/LogIn/LogIn";
 
-
-function App (){
+function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Games />} />
@@ -34,28 +33,15 @@ function App (){
 function Home() {
   return (
     <>
-     <Intro/>
+      <Intro />
       <Aboutus />
-      <SelectChoice/>
-    
+      <SelectChoice />
+
       {/* <Games />
       <Quizzes /> */}
       <Contact />
-      
     </>
   );
 }
 
-
 export default App;
-
-
-
-
-
-
-
-
-
-
-
