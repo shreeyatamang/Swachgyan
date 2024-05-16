@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './SelectChoice.css';
+import './selectgame.css';
 import PlayGame from '../../assests/PlayGame.png';
-import takeQuiz from '../../assests/takeQuiz.png';
+import binsort from '../../assests/ECOSORT.png';
 
 
-const SelectChoice = () => {
+const SelectGame = () => {
   return (
     <div className="image-container">
-      <Link to="selectgame">
+      <Link to="games">
         <img 
           src={PlayGame} 
           alt="Play Game" 
           className="choice-image"
         />
       </Link>
-      <Link to="quizzes">
+      <Link to="Binsort">
         <img 
-          src={takeQuiz} 
-          alt="Take Quiz" 
+          src={binsort} 
+          alt="Bin Sort" 
           className="choice-image"
         />
       </Link>
@@ -26,4 +26,4 @@ const SelectChoice = () => {
   );
 };
 
-export default SelectChoice;
+export default SelectGame;

@@ -10,6 +10,9 @@ import KidsClub from "./componenets/KidsClub/KidsClub";
 import SignUp from "./componenets/SignUp/SignUp";
 import Login from "./componenets/LogIn/LogIn";
 import KClogged from "./componenets/KClogged/KClogged";
+import Binsort from "./componenets/binsort/binsort";
+import SelectGame from "./componenets/selectgame/selectgame";
+
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/KidsClub" element={<KidsClub />} />
+          <Route path="/KClogged" element={<KClogged />} />
+          <Route path="/binsort" element={<Binsort />} />
+          <Route path="/selectgame" element={<SelectGame />} />
         </Routes>
       </div>
     </Router>
