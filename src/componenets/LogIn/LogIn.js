@@ -29,7 +29,7 @@ function LoginForm() {
       .then((response) => {
         if (response.status === 200) {
           alert("User successfully logged in");
-          navigate("/");
+          navigate("/KClogged"); // Navigate to KClogged component
           // Handle successful login (e.g., redirect to dashboard)
         } else if (response.status === 401) {
           alert("Invalid credentials");

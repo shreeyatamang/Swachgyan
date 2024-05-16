@@ -1,7 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
+import axios from 'axios';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate message length (max 100 words)
+    const wordCount = formData.message.trim().split(/\s+/).length;
+    if (wordCount > 100) {
+      setStatusMessage('Message should not exceed 100 words.');
+      return;
+    }
+
+    axios.post('http://localhost:3001/contact/submit', formData)
+      .then((response) => {
+        if (response.status === 200) {
+    
+          alert('Your message has been delivered.');
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setStatusMessage('Your message has been sent. Thank you!');
+        } else {
+          setStatusMessage('Failed to send message.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setStatusMessage('Failed to send message. Please try again later.');
+      });
+  };
+
   return (
     <section id="contact" className="contact">
       <div className="container" data-aos="fade-up">
@@ -42,26 +85,62 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 form-container"> {/* Added class form-container */}
-            <form action="forms/contact.php" method="post" role="form" className="php-email-form">
+          <div className="col-lg-6 form-container">
+            <form onSubmit={handleSubmit} className="php-email-form">
               <div className="row">
                 <div className="col-md-6 form-group">
-                  <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
+                  <input 
+                    type="text" 
+                    name="name" 
+                    className="form-control" 
+                    id="name" 
+                    placeholder="Your Name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    required 
+                  />
                 </div>
                 <div className="col-md-6 form-group">
-                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
+                  <input 
+                    type="email" 
+                    className="form-control" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Your Email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    required 
+                  />
                 </div>
                 <div className="col-md-12 form-group">
-                  <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
+                  <input 
+                    type="text" 
+                    className="form-control" 
+                    name="subject" 
+                    id="subject" 
+                    placeholder="Subject" 
+                    value={formData.subject} 
+                    onChange={handleChange} 
+                    required 
+                  />
                 </div>
                 <div className="col-md-12 form-group">
-                  <textarea className="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                  <textarea 
+                    className="form-control" 
+                    name="message" 
+                    id="message" 
+                    rows="7" 
+                    placeholder="Message" 
+                    value={formData.message} 
+                    onChange={handleChange} 
+                    required
+                  ></textarea>
                 </div>
                 <div className="col-md-12">
                   <div className="my-3">
                     <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">Your message has been sent. Thank you!</div>
+                    <div className="error-message">{statusMessage}</div>
+                    <div className="sent-message">{statusMessage}</div>
                   </div>
                   <div className="text-center"><button type="submit">Send Message</button></div>
                 </div>
@@ -75,15 +154,3 @@ const Contact = () => {
 }
 
 export default Contact;
-
-
-
-
-
-
-
-
-
-
-
-

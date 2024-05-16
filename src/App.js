@@ -9,6 +9,7 @@ import SelectChoice from "./componenets/SelectChoice/SelectChoice";
 import KidsClub from "./componenets/KidsClub/KidsClub";
 import SignUp from "./componenets/SignUp/SignUp";
 import Login from "./componenets/LogIn/LogIn";
+import KClogged from "./componenets/KClogged/KClogged";
 
 function App() {
   return (
