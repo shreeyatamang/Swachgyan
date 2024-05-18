@@ -4,14 +4,16 @@ import './Navbar.css';
 import IntroIcon from '../../assests/IntroIcon.png';
 import gameIcon from '../../assests/gameIcon.png';
 import quizzesIcon from '../../assests/quizIcon.png';
-import aboutUsIcon from '../../assests/aboutusIcon.png';
 import KidsClubIcon from '../../assests/kcLogo.png'; 
+import learnmoreIcon from '../../assests/learnmoreIcon.png';
+
 
 const Navbar = () => {
+  
   return (
     <nav className='navbar'>
       <div className='desktopMenu'>
-        <Link to="/" className='desktopMenuListItem'> {/* Updated path */}
+        <Link to="/" className='desktopMenuListItem'> 
           <img src={IntroIcon} alt="Home" className="menu-icon" />
           <span>Home</span>
         </Link>
@@ -23,10 +25,11 @@ const Navbar = () => {
           <img src={quizzesIcon} alt="Quizzes" className="menu-icon" />
           <span>Quizzes</span>
         </Link>
-        <Link to="/aboutus" className='desktopMenuListItem'> {/* Updated path */}
-          <img src={aboutUsIcon} alt="About Us" className="menu-icon" />
-          <span>About Us</span>
+        <Link to="/learnmore" className='desktopMenuListItem'>
+          <img src={learnmoreIcon} alt="learnmore" className="menu-icon" />
+          <span>learnmore</span>
         </Link>
+       
       
         <Link to="/KidsClub" className='desktopMenuListItem'>
           <img src={KidsClubIcon} alt="Kids Club" className="menu-icon" />
@@ -38,6 +41,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 

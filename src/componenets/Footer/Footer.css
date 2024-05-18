@@ -1,0 +1,40 @@
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(12, 139, 12, 0.899);
+  border-top: 1px solid #e7e7e7;
+}
+
+.footer-left {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.name {
+  color: white; /* Change the color as needed */
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.contact-section {
+  margin-right: 20px;
+}
+
+.contact-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.contact-section p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: white;
+}
+
+  

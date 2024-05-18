@@ -26,6 +26,7 @@
     position: fixed;
     font-family: 'Fredoka One', sans-serif;
     
+    
 }
 
 .desktopMenuListItem {
@@ -67,3 +68,5 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+

@@ -1,4 +1,4 @@
-.container {
+.Gcontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,6 +6,9 @@
     min-height: 100vh;
 }
 
+.square-wrapper {
+    display: flex;
+}
 
 .square-box {
     width: 250px;
@@ -17,6 +20,7 @@
     cursor: pointer;
     background-size: cover;
     background-position: center;
+    margin: 0 10px;
 }
 .square-box {
     display: flex;
@@ -47,7 +51,7 @@ body {
     margin: 0; 
 }
 
-.container {
+.Gcontainer {
     width: 100vw;
     max-width: 100%;
     position: relative;
@@ -135,11 +139,11 @@ h2{
     visibility: hidden;
 }
 
-.container h2 {
+.Gcontainer h2 {
     font-size: 5rem;
 }
 
-.container h2 .game-emoji {
+.Gcontainer h2 .game-emoji {
     color: white !important;
 }
 
@@ -176,7 +180,6 @@ h2{
     background-image: url('../../assests/memorygame.png');
 
 }
-
 
 
 

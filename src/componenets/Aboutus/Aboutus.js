@@ -37,7 +37,7 @@ const Aboutus = () => {
               </ul>
               <br></br>
               <div className="text-center">
-                <button className="lead-more-button">Learn More</button>
+                <button className="lead-more-button">Read More</button>
               </div>
             </div>
           </div>

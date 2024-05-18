@@ -1,3 +1,5 @@
+
+
 .contact {
   padding: 80px 0;
 }
@@ -5,20 +7,12 @@
 .section-header h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #2d7b2d;
+  color: white;
 }
 
 .section-header p {
   font-size: 18px;
-  color:  #2d7b2d; 
-}
-
-.info-container {
-  margin-right: 40px; 
-}
-
-.form-container {
-  margin-left: 40px; 
+  color: white;
 }
 
 .info-item {
@@ -27,20 +21,20 @@
 
 .info-item i {
   font-size: 24px;
-  color:  #2d7b2d;
+  color: white;
   margin-right: 10px;
 }
 
 .info-item h4 {
   font-size: 18px;
   font-weight: 600;
-  color:  #2d7b2d; 
+  color: #333;
   margin-bottom: 5px;
 }
 
 .info-item p {
   font-size: 16px;
-  color:  #2d7b2d; 
+  color: white;
 }
 
 .php-email-form input,
@@ -85,11 +79,3 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
-
-
-
-
-
-
-

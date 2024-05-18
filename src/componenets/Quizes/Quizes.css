@@ -2,11 +2,9 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+   
 }
-body{
-    background:  rgba(88, 179, 14, 0.8);
 
-}
 .app{
     background:rgba(232, 28, 62, 0.686);
     width: 90%;
@@ -79,8 +77,8 @@ body{
    
     padding: 20px;
     border-radius: 10px;
-        width: 500px; /* Fixed width */
-        height: 380px; /* Fixed height */
+        width: 50%; /* Fixed width */
+        height: 38%; /* Fixed height */
         overflow: auto; /* Add scroll if content overflows */
         margin: 0 auto; /* Center the quiz container */
         background-color: rgba(232, 28, 62, 0.686);
@@ -91,8 +89,10 @@ body{
 
  
 
-.container {
+.qcontainer {
     position: relative;
+    width: 100vw;
+    height: 100vh;
   }
   
   .congratulations {
@@ -122,4 +122,3 @@ body{
   
   
   
-

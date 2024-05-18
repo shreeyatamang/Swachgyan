@@ -52,3 +52,13 @@ button:hover {
 button:active {
     background-color: #004080;
 }
+
+.signup{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0; 
+    
+}

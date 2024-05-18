@@ -1,5 +1,5 @@
 import React from 'react';
-import './intro.css';
+import './Intro.css';
 import bg from "../../assests/bg.png";
 import { Link }from 'react-scroll';
 const Intro = () => {

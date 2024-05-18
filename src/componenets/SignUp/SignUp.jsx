@@ -63,6 +63,7 @@ function SignUpForm() {
     };
 
     return (
+        <div className="signup">
         <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" value={formData.username} onChange={handleChange} required /><br />
@@ -81,6 +82,7 @@ function SignUpForm() {
             
             <button type="submit">Sign Up</button>
         </form>
+        </div>
     );
 }
 
