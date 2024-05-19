@@ -69,4 +69,13 @@
     transform: translateX(-50%);
 }
 
+.navbar__logo {
+  position: absolute;
+  top: 10px; /* Adjust the position as needed */
+  left: 10px; /* Adjust the position as needed */
+}
 
+.logo-icon {
+  width: 25%; /* Adjust the width of the logo */
+  height: auto;
+}

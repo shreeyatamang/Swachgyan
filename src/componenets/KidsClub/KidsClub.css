@@ -14,6 +14,7 @@
     position: relative; /* Set position to relative */
     top: 10px; /* Add top position to create a gap */
     z-index: 1; /* Set a z-index to ensure it appears below the navbar */
+    width: 100vw;
 }
 
 
