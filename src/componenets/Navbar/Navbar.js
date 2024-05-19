@@ -17,7 +17,7 @@ const Navbar = () => {
           <img src={IntroIcon} alt="Home" className="menu-icon" />
           <span>Home</span>
         </Link>
-        <Link to="/selectgame" className='desktopMenuListItem'>
+        <Link to="/Games" className='desktopMenuListItem'>
           <img src={gameIcon} alt="Game" className="menu-icon" />
           <span>Games</span>
         </Link>
