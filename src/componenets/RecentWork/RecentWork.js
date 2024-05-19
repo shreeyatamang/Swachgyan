@@ -17,6 +17,7 @@ const RecentWork = () => {
   const images = [
     wasteSeg,
     recentWork,
+    '../../assets/img1.jpg'
   ];
 
   const updateImages = () => {

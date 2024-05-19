@@ -1,6 +1,6 @@
 import React from 'react';
 import './Aboutus.css';
-import kids2 from "../../assests/kids2.png";
+import kids2 from "../../assests/team.jpg";
 
 const Aboutus = () => {
   return (
@@ -29,9 +29,9 @@ const Aboutus = () => {
                 <li><i className="bi bi-check-circle-fill"></i>🌱.Foster a generation of environmentally conscious individuals.</li>
               </ul>
               <br></br>
-              <div className="text-center">
+              {/* <div className="text-center">
                 <button className="lead-more-button">Read More</button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-6">
