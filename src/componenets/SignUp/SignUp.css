@@ -1,22 +1,14 @@
-/* BinSort.css */
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    margin: 0; 
-} */
 
 form {
-    width: 100vw; 
-    max-width: 100vw;
+    width: 300vw; 
+    max-width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     
 }
+
 
 label {
     display: block;

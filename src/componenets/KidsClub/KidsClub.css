@@ -7,77 +7,80 @@
 } */
 
 .kcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* Adjust height to account for navbar height */
-    position: relative; /* Set position to relative */
-    top: 10px; /* Add top position to create a gap */
-    z-index: 1; /* Set a z-index to ensure it appears below the navbar */
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height to account for navbar height */
+  position: relative; /* Set position to relative */
+  top: 10px; /* Add top position to create a gap */
+  z-index: 1; /* Set a z-index to ensure it appears below the navbar */
+  width: 100vw;
 }
 
-
-
-
-
 .background {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 600px;
-    width: 1200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visual separation */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
+  width: 1200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visual separation */
 }
 
 .section-left,
 .section-right {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(45% - 10px); /* Set width to 50% of container width minus some margin */
-    max-width: 600px;
-    height: 500px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(
+    45% - 10px
+  ); /* Set width to 50% of container width minus some margin */
+  max-width: 600px;
+  height: 500px;
 }
 
 .section-left h2,
 .section-right h2 {
-    margin-top: 0;
-    color: RGB(214, 72, 31);
+  margin-top: 0;
+  color: RGB(214, 72, 31);
 }
 
 .section-left p,
 .section-right p {
-    margin-bottom: 20px;
-    color: RGB(214, 72, 31);
+  margin-bottom: 20px;
+  color: RGB(214, 72, 31);
 }
 
 .section-left a {
-    display: inline-block;
-    background-color: RGB(214, 72, 31);
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  background-color: RGB(214, 72, 31);
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .button {
-    display: inline-block;
-    background-color: RGB(214, 72, 31);
-    color: black;
-    padding: 10px 15px; /* Decreased padding */
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    margin-right: 10px;
+  display: inline-block;
+  background-color: RGB(214, 72, 31);
+  color: black;
+  padding: 10px 15px; /* Decreased padding */
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-right: 10px;
 }
 
 .button:hover {
-    background-color: #ff9f4d; /* Add hover effect */
+  background-color: #ff9f4d; /* Add hover effect */
 }
-
+.section-right img {
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+  height: 80%; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is a block element */
+  margin-top: 2%; /* Adjust spacing as needed */
+}

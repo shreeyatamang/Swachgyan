@@ -43,7 +43,7 @@ function LoginForm() {
 
     return (
         <div className="login login-form">
-        <form onSubmit={handleSubmit} className="container">
+        <form onSubmit={handleSubmit} className="Lcontainer">
             <div className="form-container">
                 <label htmlFor="username">Username:</label>
                 <input type="text" id="username" value={formData.username} onChange={handleChange} required /><br />
