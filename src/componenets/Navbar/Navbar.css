@@ -1,72 +1,74 @@
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @media (max-width: 768px) {
-    .desktopMenu {
-      display: none;
-    }
+  .desktopMenu {
+    display: none;
   }
-  
-
-
+}
 
 .navbar {
-    height: 100px;
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0px;
-    z-index: 3;
-    background-color: white;
-    color: RGB(214, 72, 31);
-    position: fixed;
-    font-family: 'Fredoka One', sans-serif;
-    
-    
+  height: 100px;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  background-color: white;
+  color: RGB(214, 72, 31);
+  position: fixed;
+  font-family: "Fredoka One", sans-serif;
+  
 }
+
 
 .desktopMenuListItem {
-    margin: 1rem;
-    cursor: pointer;
-    font-family: 'Fredoka One', ;
-    font-size: 20px;
-    top: 20px;
-
+  margin: 1rem;
+  cursor: pointer;
+  font-family: "Fredoka One";
+  font-size: 20px;
+  top: 20px;
 }
 .desktopMenuListItem span {
-    font-family: 'Fredoka One', sans-serif; /* Add Fredoka One font */
+  font-family: "Fredoka One", sans-serif; /* Add Fredoka One font */
 }
 
 .desktopMenuListItem:hover {
-    color: orange;
-    padding-bottom: 0.5rem;
+  color: orange;
+  padding-bottom: 0.5rem;
 }
 
 .desktopMenuListItem {
-    position: relative;
-  }
-  
-  .menu-icon {
-    position: absolute;
-    top: -50px; 
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .desktopMenuListItem {
-    position: relative;
-    text-decoration: none;
-  }
-  
-  .menu-icon {
-    position: absolute;
-    top: -50px; /* Adjust this value according to your preference */
-    left: 50%;
-    transform: translateX(-50%);
+  position: relative;
+  text-decoration: none;
 }
 
+.menu-icon {
+  position: absolute;
+  top: -50px; /* Adjust this value according to your preference */
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.navbar__logo {
+  position: absolute;
+  top: 10px; /* Adjust the position as needed */
+  left: 10px; /* Adjust the position as needed */
+}
+
+.logo-icon {
+  width: 25%; /* Adjust the width of the logo */
+  height: auto;
+}

@@ -15,25 +15,17 @@ const Aboutus = () => {
           <div className="col-lg-6">
             <div className="content ps-0 ps-lg-5">
               <h2 style={{ marginBottom: '20px' }}>At Swachyagyan, we believe that education is the key to fostering positive change.</h2>
-              <p className="fst-italic" ><b>Our Objectives:</b></p>
-              <ul>
-                <li><i className="bi bi-check-circle-fill"></i>🌍.Educate children about the importance of waste management and segregation.</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌍.Foster a sense of environmental responsibility to young learners.</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌍.Inspire children to become advocates for environmental sustainability.</li>
-              </ul>
-              <br></br>
+            
               <p className="fst-italic"><b>Our mission:</b></p>
               <ul>
                 <li><i className="bi bi-check-circle-fill"></i>🌈.Educate children about waste management and segregation practices.</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌈.Empower children to make informed decisions about waste disposal and recycling.</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌈.Foster a culture of environmental consciousness and responsibility.</li>
+     
               </ul>
               <br></br>
               <p className="fst-italic"><b>Our Goal:</b></p>
               <ul>
                 <li><i className="bi bi-check-circle-fill"></i>🌱.Raise awareness about the importance of waste management and segregation</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌱.Equip children with practical knowledge and skills to implement waste management practices.</li>
-                <li><i className="bi bi-check-circle-fill"></i>🌱.Foster a generation of environmentally conscious individuals.</li>
+        
               </ul>
               <br></br>
               <div className="text-center">
