@@ -8,7 +8,7 @@ import takeQuiz from '../../assests/takeQuiz.png';
 const SelectChoice = () => {
   return (
     <div className="image-container">
-      <Link to="selectgame">
+      <Link to="Games">
         <img 
           src={PlayGame} 
           alt="Play Game" 

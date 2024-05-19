@@ -67,8 +67,8 @@ const LearnMore = () => {
                 <div className="image">
                     <img src={poster} alt="Waste Reduction Impacts" /><br></br><br></br><br></br><br></br>
                     <img src={poster2} alt="Waste Reduction Impacts" />
-
                 </div>
+                
             </section>
 
             <div className="know">

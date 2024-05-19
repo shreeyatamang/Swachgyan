@@ -110,15 +110,36 @@
 }
 
 .image {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .image img {
-    max-width: 75%;
+    max-width: 80%;
     height: auto;
     flex: 1;
     margin-left: 80px;
+    vertical-align: top;
+    margin-top: -80%;
+    
 }
+
+.image {
+    position: relative;
+  }
+  
+  .image img {
+    position: absolute;
+  }
+  
+  .image img:first-child {
+    top: 0;
+  }
+  
+  .image img:last-child {
+    top: 170%; /* Adjust this value as needed */
+  }
+  
 
 .learnMore .text h1 {
     color: #457C40;
