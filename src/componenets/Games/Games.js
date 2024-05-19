@@ -158,4 +158,8 @@ const Games = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Games;
+=======
+export default Games;
+>>>>>>> c01804327e7ef815ae3aaa98310b8b10df23e541

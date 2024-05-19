@@ -22,7 +22,11 @@ const Navbar = () => {
           <img src={IntroIcon} alt="Home" className="menu-icon" />
           <span>Home</span>
         </Link>
+<<<<<<< HEAD
         <Link to="/Games" className="desktopMenuListItem">
+=======
+        <Link to="/Games" className='desktopMenuListItem'>
+>>>>>>> c01804327e7ef815ae3aaa98310b8b10df23e541
           <img src={gameIcon} alt="Game" className="menu-icon" />
           <span>Games</span>
         </Link>
