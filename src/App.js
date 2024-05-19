@@ -1,18 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// App.js
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./componenets/Navbar/Navbar";
-import Intro from './componenets/Intro/Intro';
-import Games from './componenets/Games/Games';
-import Quizzes from './componenets/Quizes/Quizes';
-import Aboutus from './componenets/Aboutus/Aboutus';
-import Contact from './componenets/Contact/Contact';
-import SelectChoice from './componenets/SelectChoice/SelectChoice';
-import RecentWork from './componenets/RecentWork/RecentWork';
-import KidsClub from './componenets/KidsClub/KidsClub';
-import SignUp from './componenets/SignUp/SignUp'; 
-import Login from './componenets/LogIn/LogIn';
-import Footer from './componenets/Footer/Footer';
-import Learnmore from './componenets/learnmore/Learnmore'; // Correct import
+import Intro from "./componenets/Intro/Intro";
+import Games from "./componenets/Games/Games";
+import Quizzes from "./componenets/Quizes/Quizes";
+import Aboutus from "./componenets/Aboutus/Aboutus";
+import SelectChoice from "./componenets/SelectChoice/SelectChoice";
+import KidsClub from "./componenets/KidsClub/KidsClub";
+
+import Login from "./componenets/LogIn/LogIn";
+import KClogged from "./componenets/KClogged/KClogged";
+import SelectGame from "./componenets/selectgame/selectgame";
 
 function App() {
   return (
@@ -24,13 +23,14 @@ function App() {
           <Route path="/games" element={<Games />} />
           <Route path="/quizzes" element={<Quizzes />} />
           <Route path="/aboutus" element={<Aboutus />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/Intro" element={<Intro />} />
+          
           <Route path="/login" element={<Login />} />
           <Route path="/KidsClub" element={<KidsClub />} />
-          <Route path="/learnmore" element={<Learnmore />} /> {/* Correct route */}
+          <Route path="/KClogged" element={<KClogged />} />
+          <Route path="/selectgame" element={<SelectGame />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
@@ -42,7 +42,6 @@ function Home() {
       <Intro />
       <Aboutus />
       <SelectChoice />
-      <RecentWork />
     </>
   );
 }

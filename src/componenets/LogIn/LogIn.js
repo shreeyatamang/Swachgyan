@@ -42,6 +42,7 @@ function LoginForm() {
     };
 
     return (
+        <div className="login login-form">
         <form onSubmit={handleSubmit} className="container">
             <div className="form-container">
                 <label htmlFor="username">Username:</label>
@@ -53,7 +54,9 @@ function LoginForm() {
                 <button type="submit">Log In</button>
             </div>
         </form>
+        </div>
     );
 }
 
 export default LoginForm;
+

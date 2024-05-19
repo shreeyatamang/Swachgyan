@@ -1,7 +1,7 @@
 import React from 'react';
 import './KClogged.css'; // Import CSS file if necessary
 
-const KidsClub = () => {
+const KClogged = () => {
   return (
     <div className="container">
       <div className="background">
@@ -24,4 +24,4 @@ const KidsClub = () => {
   );
 }
 
-export default KidsClub;
+export default KClogged;

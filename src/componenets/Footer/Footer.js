@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Footer.css'; // Import CSS file if necessary
+import './Footer.css'; 
 
 const Footer = () => {
   const [showFooter, setShowFooter] = useState(false);
@@ -30,12 +30,12 @@ const Footer = () => {
           <span className="name">Swachyagyan</span>
         </div>
         <div className="footer-right">
-          {/* Add your contact section here */}
+      
           <div className="contact-section">
-            <h3>Contact Us</h3>
+            <h3>Swachagyan</h3>
             <p>Email: swachgyan@swachgyan.com</p>
             <p>Phone: +977 987654321</p>
-            {/* Add more contact information as needed */}
+         
           </div>
          
         </div>
