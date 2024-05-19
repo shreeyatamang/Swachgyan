@@ -1,10 +1,10 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: antiquewhite;
     margin: 80px 0 0; 
-}
+} */
 
 .kcontainer {
     display: flex;

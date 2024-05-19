@@ -1,9 +1,9 @@
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing: border-box;
    
-}
+} */
 
 .app{
     background:rgba(232, 28, 62, 0.686);
@@ -122,3 +122,4 @@
   
   
   
+
