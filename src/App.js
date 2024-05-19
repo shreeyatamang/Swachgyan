@@ -2,7 +2,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./componenets/Navbar/Navbar";
-import Intro from "./componenets/Intro/Intro";
+import Intro from  './componenets/Intro/intro';
 import Games from "./componenets/Games/Games";
 import Quizzes from "./componenets/Quizes/Quizes";
 import Aboutus from "./componenets/Aboutus/Aboutus";
@@ -12,6 +12,8 @@ import KidsClub from "./componenets/KidsClub/KidsClub";
 import Login from "./componenets/LogIn/LogIn";
 import KClogged from "./componenets/KClogged/KClogged";
 import SelectGame from "./componenets/selectgame/selectgame";
+import LearnMore from './componenets/LearnMore/LearnMore';
+
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
           <Route path="/KidsClub" element={<KidsClub />} />
           <Route path="/KClogged" element={<KClogged />} />
           <Route path="/selectgame" element={<SelectGame />} />
+          <Route path="/LearnMore" element={<LearnMore />} />
         </Routes>
         {/* <Footer /> */}
       </div>
@@ -42,6 +45,8 @@ function Home() {
       <Intro />
       <Aboutus />
       <SelectChoice />
+    
+      
     </>
   );
 }

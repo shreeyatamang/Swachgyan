@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Learnmore.css'; 
+import './LearnMore.css'; // Import your CSS file
 import image1 from '../../assests/Untitled design (6).png';
 import image2 from '../../assests/step2.png';
 import image3 from '../../assests/step3.png';
@@ -76,10 +76,10 @@ const LearnMore = () => {
                     <section className="image-slider">
                         <div className="slider">
                         <img src={image1} alt="Image 1" />
-    <img src={image2} alt="Image 2" />
-    <img src={image3} alt="Image 3" />
-    <img src={image4} alt="Image 4" />
-    <img src={image5} alt="Image 5" />
+                        <img src={image2} alt="Image 2" />
+                        <img src={image3} alt="Image 3" />
+                        <img src={image4} alt="Image 4" />
+                        <img src={image5} alt="Image 5" />
                         </div>
                         <button className="prev" onClick={prevSlide}>&#10094;</button>
                         <button className="next" onClick={nextSlide}>&#10095;</button>
