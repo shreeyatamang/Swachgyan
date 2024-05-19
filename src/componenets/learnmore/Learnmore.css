@@ -166,11 +166,11 @@
 }
 
 .fact-box {
-    margin: 10px;
+    margin: 1px;
     padding: 20px;
     background-color: #457C40;
     border-radius: 20px;
-    height: 115px;
+    height: 25vh;
     font-family: "Comic Sans MS", cursive;
     width: 290px;
     color: #F9F8CE;

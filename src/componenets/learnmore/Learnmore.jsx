@@ -89,7 +89,7 @@ const LearnMore = () => {
             </div>
 
             <div className="centered-container">
-                <h2>DID YOU KNOW?</h2>
+                <h2>DID YOU KNOW?</h2><br></br><br></br>
             </div>
             <div className="container">
                 <section className="fact-section">
