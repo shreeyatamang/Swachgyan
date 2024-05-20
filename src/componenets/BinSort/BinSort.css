@@ -44,8 +44,8 @@
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 50vw;
+  max-height: 10vh;
   cursor: pointer;
   margin-right: 10px;
 }

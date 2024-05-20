@@ -4,6 +4,7 @@ import bk from "../../assests/bk.png";
 import memorygame from "../../assests/memorygame.png";
 import playGame from "../../assests/PlayGame.png";
 import RecyclabilityChecker from "../BinSort/BinSort";
+import binSortCover from "../../assests/BinSortGame.png"; 
 
 const Games = () => {
   const [gameStep, setGameStep] = useState("playGame"); // Track the current step of the game
@@ -116,7 +117,7 @@ const Games = () => {
         backgroundPosition: "center",
       }}
     >
-      <h2>Games</h2>
+      <h2></h2>
       {gameStep === "playGame" && (
         <div className="play-game" onClick={() => setGameStep("squareBox")}>
           <img src={playGame} alt="Play Game" />
@@ -124,15 +125,15 @@ const Games = () => {
       )}
       {gameStep === "squareBox" && (
         <div className="square-wrapper">
-          <div
-            className="square-box"
-            onClick={() => setGameStep("memoryGame")}
-          ></div>
-
-          <div
-            className="square-box"
-            onClick={() => setGameStep("binSort")}
-          ></div>
+        <div
+          className="square-box memory-game-box"
+          onClick={() => setGameStep("memoryGame")}
+        ></div>
+      
+        <div
+          className="square-box bin-sort-box"
+          onClick={() => setGameStep("binSort")}
+        ></div>
         </div>
       )}
       {gameStep === "memoryGame" && (
@@ -158,8 +159,7 @@ const Games = () => {
   );
 };
 
-<<<<<<< HEAD
+
+
 export default Games;
-=======
-export default Games;
->>>>>>> c01804327e7ef815ae3aaa98310b8b10df23e541
+

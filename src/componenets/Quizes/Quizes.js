@@ -1,10 +1,11 @@
+// Quizzes.js
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Quizes.css';
 import bgg from "../../assests/bgg.png";
 import QzCover from "../../assests/Qz.png";
 
-const Quizes = () => {
+const Quizzes = () => {
   const questionsData = [
     {
       id: 1,
@@ -28,10 +29,10 @@ const Quizes = () => {
     },
     {
       id: 3,
-      question: "3. What should you do with old clothes that are no longer wearable?",
+      question: "3. What should you do with old clothes ?",
       answers: [
         { text: "a. Throw them in the trash", correct: false },
-        { text: "b. Use them as cleaning rags", correct: false },
+        { text: "b. Burn Them", correct: false },
         { text: "c. Donate them", correct: true },
         { text: "d. Compost them", correct: false }
       ]
@@ -55,56 +56,6 @@ const Quizes = () => {
         { text: "3. Recycle them at a local recycling center", correct: false },
         { text: "4. Take them to a hazardous waste collection facility", correct: true }
       ]
-    },
-    {
-      id: 6,
-      question: "6. What is composting?",
-      answers: [
-        { text: "a. The process of burning waste", correct: false },
-        { text: "b. The process of turning food scraps and yard waste into nutrient-rich soil", correct: true },
-        { text: "c. The process of throwing food waste in the trash", correct: false },
-        { text: "d. The process of storing waste in bins", correct: false }
-      ]
-    },
-    {
-      id: 7,
-      question: "7. Which of the following is NOT recyclable?",
-      answers: [
-        { text: "a. Glass", correct: false },
-        { text: "b. Plastic", correct: false },
-        { text: "c. Paper", correct: false },
-        { text: "d. Food scraps", correct: true }
-      ]
-    },
-    {
-      id: 8,
-      question: "8. What type of waste should go into a green bin?",
-      answers: [
-        { text: "a. Plastic waste", correct: false },
-        { text: "b. Metal waste", correct: false },
-        { text: "c. Organic waste like food scraps and garden waste", correct: true },
-        { text: "d. Electronic waste", correct: false }
-      ]
-    },
-    {
-      id: 9,
-      question: "9. Why is it important to recycle?",
-      answers: [
-        { text: "a. It increases waste", correct: false },
-        { text: "b. It helps to reduce pollution, save energy, and conserve natural resources", correct: true },
-        { text: "c. It is fun", correct: false },
-        { text: "d. It makes waste management more difficult", correct: false }
-      ]
-    },
-    {
-      id: 10,
-      question: "10. Which type of waste takes the longest to decompose?",
-      answers: [
-        { text: "a. Plastic", correct: true },
-        { text: "b. Paper", correct: false },
-        { text: "c. Food", correct: false },
-        { text: "d. Glass", correct: false }
-      ]
     }
   ];
 
@@ -112,11 +63,11 @@ const Quizes = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
-  const [showQuiz, setShowQuiz] = useState(false);
-  const [quizCompleted, setQuizCompleted] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false); 
+  const [quizCompleted, setQuizCompleted] = useState(false); 
 
   const handleCoverClick = () => {
-    setShowQuiz(true);
+    setShowQuiz(true); 
   };
 
   const handleAnswerClick = (index) => {
@@ -135,10 +86,10 @@ const Quizes = () => {
     });
     setQuestions(updatedQuestions);
   };
-
+  
   const handleNextClick = () => {
     if (currentQuestionIndex === questions.length - 1) {
-      setQuizCompleted(true);
+      setQuizCompleted(true); 
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowNextButton(false);
@@ -156,7 +107,7 @@ const Quizes = () => {
     });
     return correctAnswers;
   };
-
+  
   const renderCongratulations = () => {
     const score = calculateScore();
     return (
@@ -166,18 +117,19 @@ const Quizes = () => {
       </div>
     );
   };
+  
 
   return (
-    <div className="container" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {!showQuiz && (
-        <div onClick={handleCoverClick}>
+    <div className="qcontainer" style={{ backgroundImage: `url(${bgg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {!showQuiz && ( 
+        <div className="take-Quiz" onClick={handleCoverClick}>
           <img src={QzCover} alt="Quiz Cover" className="quiz-cover" />
         </div>
       )}
 
-      {showQuiz && !quizCompleted && (
+      {showQuiz && !quizCompleted && ( 
         <div>
-          <h1 style={{ color: 'white' }}><b>QUIZES💡</b></h1>
+          <h1 style={{ color: 'white' }}><b>QUIZZES💡</b></h1>
           <div className="quize">
             <h2>{questions[currentQuestionIndex].question}</h2>
             <div id="answer-buttons">
@@ -197,9 +149,9 @@ const Quizes = () => {
         </div>
       )}
 
-      {quizCompleted && renderCongratulations()}
+      {quizCompleted && renderCongratulations()} 
     </div>
   );
 }
 
-export default Quizes;
+export default Quizzes;

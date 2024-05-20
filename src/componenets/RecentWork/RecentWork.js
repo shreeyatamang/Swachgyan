@@ -6,7 +6,7 @@ import recentWork from '../../assests/Recentwork.png';
 const RecentWorkContainer = () => {
   return (
     <div className="recent-work-container">
-      <h1>Recent Work</h1>
+      <h1>Our Recent Works</h1>
       <RecentWork />
     </div>
   );
@@ -17,7 +17,7 @@ const RecentWork = () => {
   const images = [
     wasteSeg,
     recentWork,
-    '../../assets/img4.jpg'
+    '../../assets/img1.jpg'
   ];
 
   const updateImages = () => {
@@ -36,7 +36,7 @@ const RecentWork = () => {
   };
 
   return (
-    <div className="container">
+    <div className="Rcontainer">
       <div className="arrow left-arrow" onClick={handleLeftArrowClick}>&lt;</div>
       <img
         className="image"

@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './KidsClub.css'; // Import CSS file if necessary
+import challenge from '../../assests/challenge.png';
+
 
 const KidsClub = () => {
   return (
@@ -19,7 +21,7 @@ const KidsClub = () => {
         <div className="section-right">
           <h2>This Month's Challenge</h2>
           <p>Join our exciting challenge this month!</p>
-          <img src="challenge_image.jpg" alt="This Month's Challenge"/>
+          <img src={challenge} alt="This Month's Challenge"/>
           
         </div>
       </div>

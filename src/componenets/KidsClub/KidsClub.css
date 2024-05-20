@@ -1,24 +1,11 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: antiquewhite;
-    margin: 80px 0 0; 
-}
-
 .kcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjust height to account for navbar height */
-    position: relative; /* Set position to relative */
-    top: 10px; /* Add top position to create a gap */
-    z-index: 1; /* Set a z-index to ensure it appears below the navbar */
+    height: calc(100vh - 100px); /* Adjust height to account for navbar height */
+    margin-top: 100px; /* Add margin-top to create a gap */
+    width: 100vw;
 }
-
-
-
-
 
 .background {
     background-color: white;
@@ -38,7 +25,9 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: calc(45% - 10px); /* Set width to 50% of container width minus some margin */
+    width: calc(
+      45% - 10px
+    ); /* Set width to 50% of container width minus some margin */
     max-width: 600px;
     height: 500px;
 }
@@ -80,3 +69,9 @@ body {
     background-color: #ff9f4d; /* Add hover effect */
 }
 
+.section-right img {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    height: 80%; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    margin-top: 2%; /* Adjust spacing as needed */
+}

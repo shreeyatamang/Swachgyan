@@ -176,10 +176,13 @@ h2{
 .congratulations button:hover {
     background-color: #45a049;
 }
-.square-box {
+.square-box.memory-game-box {
     background-image: url('../../assests/memorygame.png');
-
-}
+  }
+  
+  .square-box.bin-sort-box {
+    background-image: url('../../assests/BinSortGame.png'); /* Assuming you have a binsort.png image in the assets folder */
+  }
 
 
 

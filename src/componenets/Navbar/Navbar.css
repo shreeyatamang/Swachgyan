@@ -6,22 +6,25 @@
 }
 
 .navbar {
-  height: 100px;
+  height: 100px; /* Fixed height for the navbar */
   width: 100vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 0px;
+  position: fixed; /* Change position to fixed */
+  top: 0;
+  left: 0; /* Align the navbar to the left side */
   z-index: 1000;
   background-color: white;
   color: RGB(214, 72, 31);
-  position: fixed;
   font-family: "Fredoka One", sans-serif;
-  
 }
 
+.desktopMenu {
+  margin-left: 35%; /* Adjust margin to keep menu centered */ transform: translateX(-50%); 
+  transform: translateX(-50%); /* Center menu horizontally */
+}
 
 .desktopMenuListItem {
   margin: 1rem;
@@ -46,18 +49,6 @@
 .menu-icon {
   position: absolute;
   top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.desktopMenuListItem {
-  position: relative;
-  text-decoration: none;
-}
-
-.menu-icon {
-  position: absolute;
-  top: -50px; /* Adjust this value according to your preference */
   left: 50%;
   transform: translateX(-50%);
 }

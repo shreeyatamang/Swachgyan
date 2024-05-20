@@ -1,9 +1,9 @@
-*{
+/* *{
     margin:0;
     padding:0;
     box-sizing: border-box;
    
-}
+} */
 
 .app{
     background:rgba(232, 28, 62, 0.686);
@@ -11,7 +11,6 @@
     max-width: 600px;
     margin: 100px auto 0;
     border-radius: 10px;
-    padding: 30px;
 }
 .app h1{
     font-size: 25px;
@@ -73,52 +72,45 @@
     text-align: center;
   }
 
-  .quize {
-   
-    padding: 20px;
-    border-radius: 10px;
-        width: 50%; /* Fixed width */
-        height: 38%; /* Fixed height */
-        overflow: auto; /* Add scroll if content overflows */
-        margin: 0 auto; /* Center the quiz container */
-        background-color: rgba(232, 28, 62, 0.686);
-        border-radius: 10px;
-        padding: 20px;
-   
-  }
+ /* Quizzes.css */
 
- 
+ .qcontainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* Center content horizontally and vertically */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  background-size: cover; /* Cover the entire container with background image */
+  background-position: center; /* Center the background image */
+}
 
-.qcontainer {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .congratulations {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  .congratulations h1 {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .congratulations p {
-    font-size: 18px;
-    color: #666;
-  }
-  
+.quiz-cover {
+  width: 100%;
+  max-width: 600px;
+}
 
+.quize {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(232, 28, 62, 0.686);
+}
 
+.congratulations {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Added background for better visibility */
+  padding: 20px;
+  border-radius: 10px;
+}
 
+.congratulations h1 {
+  font-size: 24px;
+  color: #333;
+}
 
-
- 
-  
-  
-  
+.congratulations p {
+  font-size: 18px;
+  color: #666;
+}

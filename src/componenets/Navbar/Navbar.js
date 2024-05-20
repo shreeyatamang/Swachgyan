@@ -22,11 +22,7 @@ const Navbar = () => {
           <img src={IntroIcon} alt="Home" className="menu-icon" />
           <span>Home</span>
         </Link>
-<<<<<<< HEAD
         <Link to="/Games" className="desktopMenuListItem">
-=======
-        <Link to="/Games" className='desktopMenuListItem'>
->>>>>>> c01804327e7ef815ae3aaa98310b8b10df23e541
           <img src={gameIcon} alt="Game" className="menu-icon" />
           <span>Games</span>
         </Link>
@@ -35,8 +31,8 @@ const Navbar = () => {
           <span>Quizzes</span>
         </Link>
         <Link to="/learnmore" className="desktopMenuListItem">
-          <img src={learnmoreIcon} alt="learnmore" className="menu-icon" />
-          <span>learnmore</span>
+          <img src={learnmoreIcon} alt="Learnmore" className="menu-icon" />
+          <span>Learnmore</span>
         </Link>
 
         <Link to="/KidsClub" className="desktopMenuListItem">

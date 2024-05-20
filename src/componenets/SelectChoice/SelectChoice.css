@@ -1,22 +1,21 @@
-/* body, html {
-    margin: 0;
-    padding: 0;
-  
-    background-size: cover;
-  } */
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    background-color: antiquewhite;
-  }
-  
-  .image-container img {
-    width: 550px;
-    height: auto;
-    margin: 0 20px;
-    cursor: pointer;
-   
-  }
-  
+body, html {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+.image-Scontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  background-color: antiquewhite;
+  max-width: 100%; /* Adjusted to 100% to fit within the parent container */
+  overflow: hidden; /* Add this if you want to ensure no overflow */
+}
+
+.image-Scontainer img { /* Corrected the typo here */
+  max-width: 100%;
+  height: auto;
+  margin: 0 20px;
+  cursor: pointer;
+}

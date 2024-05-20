@@ -1,35 +1,30 @@
-/* Aboutus.css */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
 
 /* Aboutus.css */
 #about {
     padding-top: 80px; /* Adjust the value as needed to create the desired gap */
     padding-bottom: 60px;
-    background: rgb(144, 238, 144);
+    background: wheat;
     font-family: 'Fredoka One', sans-serif;
+    width: 100vw;
 }
 
-/* Rest of your CSS styles */
-
-
-
-
-
+/* New styles for the section header container */
+.section-header-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 #about .section-header {
     margin-bottom: 30px;
-    text-align: center;
 }
 
 #about .section-header h2 {
-    font-size: 36px;
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 10px;
     position: relative;
-    
-    
 }
 
 #about .section-header h2::after {
@@ -40,13 +35,11 @@
     position: absolute;
     left: calc(50% - 40px);
     bottom: 0;
-
 }
 
 #about .section-header p {
     margin-bottom: 0;
     
-;
 }
 
 #about .row {
@@ -68,8 +61,6 @@
     }
 }
 
-  
-
 #about img {
     max-width: 100%;
     border-radius: 10px;
@@ -83,6 +74,7 @@
 #about .content ul li {
     position: relative;
     padding-left: 30px;
+    font-size: 2rem;
 }
 
 #about .content ul li i {
@@ -91,7 +83,6 @@
     top: 5px;
     font-size: 24px;
     color: rgb(43, 59, 9);
-
 }
 
 /* Continuous moving animation for h3 text */
@@ -106,6 +97,7 @@
         transform: translateX(0);
     }
 }
+
 #about,
 #about * {
     color: rgb(43, 59, 9); 
@@ -117,17 +109,13 @@
     animation: moveText 3s linear infinite; 
     color: rgb(0, 96, 0);
     font-size: x-large;
-    
 }
-
 
 .col-lg-6 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 .kids2 {
@@ -135,6 +123,7 @@
     height: auto;
     flex: 1;
     margin-left: 80px;
+    width: 43vw;
 }
 
 .lead-more-button {
@@ -151,18 +140,6 @@
     transition: background-color 0.3s ease;
 }
 
-
-.learn-more-button:hover {
+.lead-more-button:hover {
     background-color: green; 
 }
-
-  
-
-
-
-
-
-  
-
-
-  

@@ -17,7 +17,8 @@ import glass from "../../assests/glass.png";
 import medicines from "../../assests/medicines.png";
 import pad from "../../assests/sanitarypad.png";
 import Wrappers from "../../assests/waiwai.png";
-
+import Bottles from "../../assests/bottle.png";
+import usedPaperCups from "../../assests/cups.png";
 import grass from "../../assests/grass.png";
 
 const images = {
@@ -28,11 +29,11 @@ const images = {
   Bananas: banana,
   "Cardboard Boxes": Cardboard,
   Toiletpapers: Toiletpapers,
-  "Water Bottles": "",
+  "Water Bottles": Bottles,
   "Aluminium Cans": can,
   "Milk Jugs": Milk,
   "Broken Glass Pieces": glass,
-  "Used Paper Cups": "",
+  "Used Paper Cups": usedPaperCups,
   Medicines: medicines,
   "Sanitary Pads": pad,
   "Food Wrappers": Wrappers,
@@ -124,22 +125,24 @@ const RecyclabilityChecker = () => {
   };
 
   const showRandomItem = () => {
+    if (remainingImages.length === 0) {
+      setImageName(""); // Clear the current image
+      setResult("The end");
+      return;
+    }
     const currentItemIndex = Math.floor(Math.random() * remainingImages.length);
     setCurrentItemIndex(currentItemIndex);
     setImageName(remainingImages[currentItemIndex]);
   };
 
-  console.log(currentItemIndex, images[recyclableItems[currentItemIndex]]);
-
   return (
     <div className="bin-sort-container">
       <h1>Drag the Item to the Trash Bins!</h1>
-      <img className="hand" src={hand} alt="hand" />
+      <img className="hand" src={hand} alt="hand" draggable="false" />
       <div className="itemContainer">
         {currentItemIndex !== -1 && (
           <img
             className="itemImage"
-            // src={`./img/${remainingImages[currentItemIndex].toLowerCase()}.png`}
             src={images[imageName]}
             alt={imageName}
             draggable="true"
@@ -181,8 +184,7 @@ const RecyclabilityChecker = () => {
           onDrop={(e) => binDrop(e, "nonRecyclableBin")}
         />
       </div>
-
-      <img className="grass" src={grass} alt="" />
+      <img className="grass" src={grass} alt="grass" />
       <div id="result">{result}</div>
     </div>
   );
