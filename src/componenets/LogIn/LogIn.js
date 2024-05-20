@@ -18,7 +18,7 @@ function LoginForm() {
         e.preventDefault();
 
         // Send POST request to backend endpoint
-        fetch("http://localhost:3001/auth/login", {
+        fetch("https://swachgyanbackend.vercel.app/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

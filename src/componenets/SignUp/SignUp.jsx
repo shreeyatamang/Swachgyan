@@ -45,7 +45,7 @@ function SignUpForm(props) {
     // Send POST request to backend endpoint
     axios
       .post(
-        "http://localhost:3001/auth/signup",
+        "https://swachgyanbackend.vercel.app/auth/signup",
         {
           username: formData.username,
           email: formData.email,
