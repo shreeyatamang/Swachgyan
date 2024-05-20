@@ -10,12 +10,11 @@ import SelectChoice from "./componenets/SelectChoice/SelectChoice";
 import KidsClub from "./componenets/KidsClub/KidsClub";
 import Login from "./componenets/LogIn/LogIn";
 import KClogged from "./componenets/KClogged/KClogged";
+import LearnMore from "./componenets/LearnMore/LearnMore";
 import RecentWork from "./componenets/RecentWork/RecentWork";
 import SignUp from './componenets/SignUp/SignUp';
 import Footer from './componenets/Footer/Footer';
-import LearnMore from './componenets/LearnMore/LearnMore';
 import Contact from './componenets/Contact/Contact';
-
 
 
 function App() {
@@ -30,18 +29,16 @@ function App() {
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/Intro" element={<Intro />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/LearnMore" element={<LearnMore />} />
+
           <Route path="/login" element={<Login />} />
           <Route path="/KidsClub" element={<KidsClub />} />
           <Route path="/KClogged" element={<KClogged />} />
-         
 
-          
+          <Route path="/LearnMore" element={<LearnMore />} />
         </Routes>
-        {/* <Footer /> */}
+       
       </div>
     </Router>
-    
   );
 }
 

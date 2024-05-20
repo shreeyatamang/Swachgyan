@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ const Contact = () => {
     message: "",
   });
   const [statusMessage, setStatusMessage] = useState("");
+  let navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -31,8 +34,9 @@ const Contact = () => {
     axios
       .post("https://swachgyanbackend.vercel.app/contact/submit", formData)
       .then((response) => {
-        if (response.status === 200) {
+        if (response.status === 201) {
           alert("Your message has been delivered.");
+          navigate("/");
           setFormData({ name: "", email: "", subject: "", message: "" });
           setStatusMessage("Your message has been sent. Thank you!");
         } else {

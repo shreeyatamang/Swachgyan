@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import './Login.css'; // Import the CSS file
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function LoginForm() {
     const [formData, setFormData] = useState({
         username: '',
         password: ''
     });
+    let navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({
@@ -18,26 +21,25 @@ function LoginForm() {
         e.preventDefault();
 
         // Send POST request to backend endpoint
-        fetch("https://swachgyanbackend.vercel.app/auth/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
+        axios
+        .post("https://swachgyanbackend.vercel.app/auth/login", {
+          username: formData.username,
+          password: formData.password,
         })
-        .then(response => {
-            if (response.status === 200) {
-                alert("User successfully logged in");
-                // Handle successful login (e.g., redirect to dashboard)
-            } else if (response.status === 401) {
-                alert("Invalid credentials");
-            } else {
-                alert("Internal server error");
-            }
+        .then((response) => {
+          if (response.status === 200) {
+            alert("User successfully logged in");
+            navigate("/KClogged"); // Navigate to KClogged component
+            // Handle successful login (e.g., redirect to dashboard)
+          } else if (response.status === 401) {
+            alert("Invalid credentials");
+          } else {
+            alert("Internal server error");
+          }
         })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("Failed to log in. Please try again later.");
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Failed to log in. Please try again later.");
         });
     };
 
